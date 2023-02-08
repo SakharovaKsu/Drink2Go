@@ -13,19 +13,19 @@
       <nav class="nav">
         <div class="nav__container">
           <a class="nav__logo" href="index.html">
-            <img src="./img/logo-mobile.svg" type="image/svg+xml" width="32" height="36" alt="Логотип Drink2Go.">
+            <img src="./img/logo-mobile.svg" width="32" height="36" alt="Логотип Drink2Go.">
           </a>
           <div class="nav__toggle">
             <ul class="nav__list">
               <li class="nav__item">
                 <a class="nav__link" href="#">
-                  <img src="./img/user.svg" type="image/svg+xml" alt="Иконка аккаунта.">
+                  <img src="./img/user.svg" alt="Иконка аккаунта.">
                   <span class="visually-hidden">Аккаунт</span>
                 </a>
               </li>
               <li class="nav__item">
                 <a class="nav__link" href="#">
-                  <img src="./img/basket.svg" type="image/svg+xml" alt="Иконка корзины.">
+                  <img src="./img/basket.svg" alt="Иконка корзины.">
                   <span class="visually-hidden">Корзина</span>
                 </a>
               </li>
@@ -131,14 +131,28 @@
 
       <!-- Каталог -->
       <section class="catalog">
-        <span class="catalog__slogan slogan">Каталог</span>
+        <div class="catalog__container">
+          <span class="catalog__slogan slogan">Каталог</span>
         <h2 class="catalog__title title">Каталог кофейных напитков</h2>
 
         <!-- Фильтр -->
         <div class="filter">
-          <div class="filter-range">
-            <h3 class="filter-range__title">Цена</h3>
-            <!-- слайдер -->
+          <div class="filter__range range">
+            <h3 class="range__title">Цена</h3>
+            <div class="range__scale">
+              <div class="range__bar">
+                <button class="range__toggle range__toggle--min">
+                  <span class="visually-hidden">Изменить минимальную цену.</span>
+                </button>
+                <button class="range__toggle range__toggle--max">
+                  <span class="visually-hidden">Изменить максимальную цену.</span>
+                </button>
+              </div>
+              <div class="range__wrapper">
+                <input class="range__input" type="number" value="0" name="min-praice">
+                <input class="range__input range__input--active" type="number" value="900" name="max-praice">
+              </div>
+            </div>
           </div>
 
           <!-- Радиокнопки -->
@@ -302,14 +316,16 @@
           </ol>
           <a class="pagination__link pagination__button" href="#">вперед</a>
         </div>
+        </div>
       </section>
 
       <!-- Карта -->
       <section class="map">
+        <h2 class="visually-hidden">Карта</h2>
         <div style="position:relative;overflow:hidden;">
           <a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a>
           <a href="https://yandex.ru/maps/2/saint-petersburg/house/naberezhnaya_reki_karpovki_5/Z0kYdQZmS0IFQFtjfXV3eX1gYw==/?ll=30.316272%2C59.968137&utm_medium=mapframe&utm_source=maps&z=16.99" style="color:#eee;font-size:12px;position:absolute;top:14px;">Набережная реки Карповки, 5 — Яндекс Карты</a>
-          <iframe src="https://yandex.ru/map-widget/v1/?ll=30.316272%2C59.968137&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzQwNzQ2MxJe0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0L3QsNCx0LXRgNC10LbQvdCw0Y8g0YDQtdC60Lgg0JrQsNGA0L%2FQvtCy0LrQuCwgNSIKDbiH8kEVYN9vQg%3D%3D&z=16.99" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;">
+          <iframe src="https://yandex.ru/map-widget/v1/?ll=30.316272%2C59.968137&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzQwNzQ2MxJe0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0L3QsNCx0LXRgNC10LbQvdCw0Y8g0YDQtdC60Lgg0JrQsNGA0L%2FQvtCy0LrQuCwgNSIKDbiH8kEVYN9vQg%3D%3D&z=16.99" width="560" height="400">
           </iframe>
         </div>
       </section>
