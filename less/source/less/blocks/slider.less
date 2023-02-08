@@ -1,0 +1,115 @@
+.slider {
+  position: relative;
+  width: 100vw;
+  background-color: @bk-colors-light-warm;
+}
+
+.slider__back-button,
+.slider__forward-button {
+  position: absolute;
+  height: 100%;
+  width: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+.slider__back-button::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  background-color: @color-dark-text;
+  background-image: url("../../img/arrow.svg");
+}
+
+.slider__back-button {
+  &:hover {
+    background: linear-gradient(to right, @color-light, transparent);
+  }
+
+  &:active {
+    background: linear-gradient(to right, @color-base-contrast, transparent);
+  }
+
+  &:focus {
+    background: linear-gradient(to right, @color-light, transparent);
+  }
+}
+
+.slider__forward-button {
+  right: 0;
+  top: 0;
+
+  &:hover {
+    background: linear-gradient(to left, @color-light, transparent);
+  }
+
+  &:active {
+    background: linear-gradient(to left, @color-base-contrast, transparent);
+  }
+
+  &:focus {
+    background: linear-gradient(to left, @color-light, transparent);
+  }
+}
+
+.slider__forward-button::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  background-color: @color-dark-text;
+  background-image: url("../../img/arrow.svg");
+}
+
+.slider__list {
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  background-size: 100%;
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  list-style-type: none;
+}
+
+.slider__slogan {
+  display: block;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  color: @color-base-contrast;
+  margin-top: 10px;
+}
+
+.slider__title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.slider__text {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.slider__container {
+  display: flex;
+  justify-content: center;
+}
+
+.slider__desc {
+  font-size: 16px;
+  line-height: 32px;
+  color: @color-base-contrast;
+  margin-right: 6px;
+}
+
+.slider__text-desc {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  margin-right: 20px;
+}
