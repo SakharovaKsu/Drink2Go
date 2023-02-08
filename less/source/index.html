@@ -10,31 +10,45 @@
 
     <!-- Шапка -->
     <header class="header">
-      <a class="header__logo" href="index.html">
-        <img src="./img/logo-mobile.svg" type="image/svg+xml" width="32" height="36" alt="Логотип Drink2Go.">
-      </a>
       <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__link" href="#">
-              <span class="visually-hidden">Аккаунт</span>
-            </a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">
-              <span class="visually-hidden">Корзина</span>
-            </a>
-          </li>
-        </ul>
-        <button class="nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <div class="nav__list nav__wrapper">
+        <div class="nav__container">
+          <a class="nav__logo" href="index.html">
+            <img src="./img/logo-mobile.svg" type="image/svg+xml" width="32" height="36" alt="Логотип Drink2Go.">
+          </a>
+          <div class="nav__toggle">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="#">
+                  <img src="./img/user.svg" type="image/svg+xml" alt="Иконка аккаунта.">
+                  <span class="visually-hidden">Аккаунт</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">
+                  <img src="./img/basket.svg" type="image/svg+xml" alt="Иконка корзины.">
+                  <span class="visually-hidden">Корзина</span>
+                </a>
+              </li>
+            </ul>
+            <button class="nav__button" type="button">
+              <span class="visually-hidden">Mеню</span>
+            </button>
+          </div>
+        </div>
+        <div class="nav__wrapper">
           <ul class="site-list">
-            <li class="site-list__item">Главная</li>
-            <li class="site-list__item">Каталог</li>
-            <li class="site-list__item">Доставка</li>
-            <li class="site-list__item">О нас</li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">Каталог</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">Доставка</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">О нас</a>
+            </li>
           </ul>
         </div>
       </nav>
