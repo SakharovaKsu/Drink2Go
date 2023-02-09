@@ -10,55 +10,51 @@
 
     <!-- Шапка -->
     <header class="header">
-      <nav class="nav">
-        <div class="nav__container">
-          <a class="nav__logo" href="index.html">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="./img/logo-tablet.svg 1x">
-              <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg 1x">
-              <img src="./img/logo-mobile.svg" width="32" height="36" alt="Логотип Drink2Go.">
-            </picture>
-          </a>
-          <div class="nav__toggle">
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a class="nav__link" href="#">
-                  <svg width="16" height="16" aria-label="Иконка аккаунта.">
-                    <use xlink:href="./img/icons/stack.svg#user"></use>
-                  </svg>
-                  <span class="visually-hidden">Аккаунт</span>
-                </a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link" href="#">
-                  <svg width="16" height="16" aria-label="Иконка корзины.">
-                    <use xlink:href="./img/icons/stack.svg#basket"></use>
-                  </svg>
-                  <span class="visually-hidden">Корзина</span>
-                </a>
-              </li>
-            </ul>
-            <button class="nav__button" type="button">
-              <span class="visually-hidden">Mеню</span>
-            </button>
-          </div>
-        </div>
-        <div class="nav__wrapper">
-          <ul class="site-list">
-            <li class="site-list__item">
-              <a class="site-list__link" href="index.html">Главная</a>
+      <nav class="nav nav--closed">
+        <a class="nav__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="./img/logo-tablet.svg 1x">
+            <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg 1x">
+            <img class="nav__picture" src="./img/logo-mobile.svg" width="32" height="36" alt="Логотип Drink2Go.">
+          </picture>
+        </a>
+        <div class="nav__toggle">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                <svg width="16" height="16" aria-label="Иконка аккаунта.">
+                  <use xlink:href="./img/icons/stack.svg#user"></use>
+                </svg>
+                <span class="visually-hidden">Аккаунт</span>
+              </a>
             </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="#">Каталог</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="#">Доставка</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="#">О нас</a>
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                <svg width="16" height="16" aria-label="Иконка корзины.">
+                  <use xlink:href="./img/icons/stack.svg#basket"></use>
+                </svg>
+                <span class="visually-hidden">Корзина</span>
+              </a>
             </li>
           </ul>
+          <button class="nav__button" type="button">
+            <span class="visually-hidden">Mеню</span>
+          </button>
         </div>
+        <ul class="site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Каталог</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Доставка</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">О нас</a>
+          </li>
+        </ul>
       </nav>
     </header>
 

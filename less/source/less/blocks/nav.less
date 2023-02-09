@@ -8,11 +8,19 @@
 }
 
 .nav__logo {
-  margin: 12px auto 12px 20px;
+  margin-left: 20px;
+}
+
+.nav__picture {
+  width: 32px;
+  height: 36px;
 }
 
 .nav__toggle {
   display: flex;
+  position: absolute;
+  top: 10px;
+  right: 0;
 }
 
 .nav__list {
@@ -30,7 +38,7 @@
 
 .nav__button {
   position: absolute;
-  top: 5px;
+  top: -16px;
   right: 0;
   display: block;
   width: 12px;
@@ -53,3 +61,59 @@
   }
 }
 
+@media (max-width: @mobile-width-only) {
+  .nav--closed .site-list__item {
+    display: none;
+  }
+
+  .nav--nojs .nav__button {
+    display: none;
+  }
+
+  .nav--nojs .site-list {
+    position: static;
+    min-height: 0;
+    margin-top: 14px;
+  }
+
+  .nav--nojs .site-list__item {
+    display: block;
+  }
+
+  .nav--opened {
+    padding-bottom: 12px;
+  }
+
+  .nav--opened .nav__button::after,
+  .nav--opened .nav__button::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    right: 22px;
+    width: 16px;
+    height: 2px;
+    background-color: @color-dark-text;
+  }
+
+  .nav--opened .nav__button::after {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  .nav--opened .nav__button::before {
+    transform: rotate(-45deg);
+  }
+
+  .nav--opened .site-list {
+    position: absolute;
+    top: 36px;
+    right: 22px;
+    left: -4%;
+    z-index: 10;
+    width: 100vw;
+    min-height: 24vh;
+    background-color: @color-light;
+    border-top: 1px solid @color-basic-light;
+    border-bottom: 1px solid @color-basic-light;
+  }
+}
