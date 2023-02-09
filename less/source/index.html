@@ -19,13 +19,17 @@
             <ul class="nav__list">
               <li class="nav__item">
                 <a class="nav__link" href="#">
-                  <img src="./img/user.svg" alt="Иконка аккаунта.">
+                  <svg width="16" height="16" aria-label="Иконка аккаунта.">
+                    <use xlink:href="./img/icons/stack.svg#user"></use>
+                  </svg>
                   <span class="visually-hidden">Аккаунт</span>
                 </a>
               </li>
               <li class="nav__item">
                 <a class="nav__link" href="#">
-                  <img src="./img/basket.svg" alt="Иконка корзины.">
+                  <svg width="16" height="16" aria-label="Иконка корзины.">
+                    <use xlink:href="./img/icons/stack.svg#basket"></use>
+                  </svg>
                   <span class="visually-hidden">Корзина</span>
                 </a>
               </li>
@@ -338,9 +342,7 @@
       <!-- Карта -->
       <section class="map">
         <h2 class="visually-hidden">Карта</h2>
-        <div style="position:relative;overflow:hidden;">
-          <a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a>
-          <a href="https://yandex.ru/maps/2/saint-petersburg/house/naberezhnaya_reki_karpovki_5/Z0kYdQZmS0IFQFtjfXV3eX1gYw==/?ll=30.316272%2C59.968137&utm_medium=mapframe&utm_source=maps&z=16.99" style="color:#eee;font-size:12px;position:absolute;top:14px;">Набережная реки Карповки, 5 — Яндекс Карты</a>
+        <div>
           <iframe src="https://yandex.ru/map-widget/v1/?ll=30.316272%2C59.968137&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzQwNzQ2MxJe0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0L3QsNCx0LXRgNC10LbQvdCw0Y8g0YDQtdC60Lgg0JrQsNGA0L%2FQvtCy0LrQuCwgNSIKDbiH8kEVYN9vQg%3D%3D&z=16.99" width="560" height="400">
           </iframe>
         </div>
@@ -357,16 +359,25 @@
           <ul class="social">
             <li class="social__item">
               <a class="social__link" href="#">
+                <svg width="20" height="20" aria-label="Иконка Вконтакте.">
+                  <use xlink:href="./img/icons/stack.svg#vk"></use>
+                </svg>
                 <span class="visually-hidden">Вконтакте</span>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#">
+                <svg width="20" height="20" aria-label="Иконка Пинтерест.">
+                  <use xlink:href="./img/icons/stack.svg#pinterest"></use>
+                </svg>
                 <span class="visually-hidden">Pinterest</span>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#">
+                <svg width="20" height="20" aria-label="Иконка Одноклассники.">
+                  <use xlink:href="./img/icons/stack.svg#ok"></use>
+                </svg>
                 <span class="visually-hidden">Одноклассники</span>
               </a>
             </li>
@@ -375,7 +386,8 @@
 
         <!-- Ссылки интернет-магазина -->
         <div class="nav-footer">
-          <h2 class="nav-footer__title">Интернет-магазин</h2>
+          <div class="nav-footer__container">
+            <h2 class="nav-footer__title">Интернет-магазин</h2>
           <ul class="nav-footer__list">
             <li class="nav-footer__item">
               <a class="nav-footer__link" href="#">Каталог</a>
@@ -390,35 +402,43 @@
               <a class="nav-footer__link" href="#">О нас</a>
             </li>
           </ul>
+          </div>
         </div>
 
         <!-- Медиа -->
         <div class="nav-footer">
-          <h2 class="nav-footer__title">Медиа</h2>
-          <ul class="nav-footer__list">
-            <li class="nav-footer__item">
-              <a class="nav-footer__link" href="#">Блог</a>
-            </li>
-            <li class="nav-footer__item">
-              <a class="nav-footer__link" href="#">Информация для СМИ</a>
-            </li>
-            <li class="nav-footer__item">
-              <a class="nav-footer__link" href="#">Правовая информация</a>
-            </li>
-          </ul>
+          <div class="nav-footer__container">
+            <h2 class="nav-footer__title">Медиа</h2>
+            <ul class="nav-footer__list">
+              <li class="nav-footer__item">
+                <a class="nav-footer__link" href="#">Блог</a>
+              </li>
+              <li class="nav-footer__item">
+                <a class="nav-footer__link" href="#">Информация для СМИ</a>
+              </li>
+              <li class="nav-footer__item">
+                <a class="nav-footer__link" href="#">Правовая информация</a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <!-- Контакты -->
-        <div class="contacts">
-          <h2 class="contacts__title">Контакты</h2>
-          <p class="contacts__text">Санкт-Петербург, набережная реки Карповки, дом 5</p>
-          <a class="contacts__tel" href="tel:+79999999">+7(999) 999-99-99</a>
+        <div class="nav-footer nav-footer--decor">
+          <div class="nav-footer__container">
+            <h2 class="nav-footer__title">Контакты</h2>
+            <p class="nav-footer__contacts">Санкт-Петербург, набережная реки Карповки, дом 5</p>
+            <a class="nav-footer__tel" href="tel:+79999999">+7(999) 999-99-99</a>
+          </div>
         </div>
 
         <!-- Разработано -->
         <div class="logo-html">
           <a class="logo-html__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт Html Academy.">
-            <p class="logo-html__text">HTML Academy</p>
+            <p class="logo-html__text">Разработано в HTML Academy</p>
+            <svg width="12" height="16" aria-label="Иконка HTML Academy.">
+              <use xlink:href="./img/icons/stack.svg#logo-html"></use>
+            </svg>
           </a>
         </div>
       </footer>
