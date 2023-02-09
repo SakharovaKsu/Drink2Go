@@ -69,3 +69,42 @@
   line-height: 32px;
   margin-bottom: 4px;
 }
+
+@media (min-width: @tablet-width) {
+  .benefits {
+    width: calc(100% - 40px);
+    padding-bottom: 100px;
+    padding-top: 60px;
+  }
+
+  .benefits__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 30px;
+    margin-top: 60px;
+  }
+
+  .benefits__item {
+    max-width: 339px;
+    padding-top: 0;
+    padding-left: 70px;
+    text-align: left;
+  }
+
+  .benefits__icon-one::before,
+  .benefits__icon-two::before {
+    left: 0;
+    top: 0;
+  }
+
+  .benefits__icon-three::before,
+  .benefits__icon-four::before {
+    left: 0;
+    top: 0;
+  }
+
+  .benefits__subtitle {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}

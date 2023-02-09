@@ -9,6 +9,9 @@
 
 .sorting__title {
   margin: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .sorting__select {
@@ -23,4 +26,17 @@
   background-image: url("../../img/arrow-select.svg");
   background-repeat: no-repeat;
   background-position: right center;
+}
+
+@media (min-width: @tablet-width) {
+  .sorting {
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 30px;
+    padding-top: 44px;
+  }
+
+  .sorting__select {
+    max-width: 145px;
+  }
 }

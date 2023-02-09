@@ -10,19 +10,27 @@
   background-size: 100%;
 }
 
+.catalog__wrapper {
+  flex-wrap: wrap;
+}
+
 .catalog__title {
   margin: 0;
   text-align: center;
 }
 
-.sorting__select {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  color: @color-base-contrast;
-  border: none;
-  background-color: transparent;
-  appearance: none;
-  max-width: 125px;
-  background-image: url("../../img/arrow-select.svg");
+@media (min-width: @tablet-width) {
+  .catalog {
+    padding-top: 80px;
+  }
+
+  .catalog__container {
+    width: calc(100% - 40px);
+  }
+
+  .catalog__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
 }

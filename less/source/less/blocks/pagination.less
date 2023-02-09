@@ -4,6 +4,10 @@
   align-items: center;
 }
 
+.pagination__text {
+  display: none;
+}
+
 .pagination__button {
   background-color: @color-light;
   border-radius: 4px;
@@ -15,7 +19,7 @@
   cursor: pointer;
 }
 
-.pagination__button--transform {
+.pagination__back {
   transform: scale(-1, -1);
 }
 
@@ -47,4 +51,32 @@
 .pagination__link--active {
   color: @color-dark-text;
   font-weight: 600;
+}
+
+@media (min-width: @tablet-width) {
+  .pagination {
+    justify-content: flex-end;
+    margin-right: -20px;
+  }
+
+  .pagination__button {
+    width: 140px;
+    background-image: none;
+    text-decoration: none;
+  }
+
+  .pagination__forward {
+    padding: 8px 43px 8px 52px;
+  }
+
+  .pagination__back {
+    transform: scale(1, 1);
+    padding: 8px 52px 8px 43px;
+    border-radius: 0 0 4px 4px;
+  }
+
+  .pagination__text {
+    display: block;
+    color: @color-base-contrast;
+  }
 }

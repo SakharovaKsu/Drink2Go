@@ -1,4 +1,4 @@
-.nav-footer {
+.nav-footer__wrapper {
   border-top: 1px solid @color-basic-light;
   padding-top: 22px;
 }
@@ -61,4 +61,27 @@
   background-image: url("../../img/phone.svg");
   background-repeat: no-repeat;
   background-position: left center;
+}
+
+@media (min-width: @tablet-width) {
+  .nav-footer {
+    width: calc(100% - 40px);
+    margin: 0 20px;
+    background-size: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .nav-footer__wrapper {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .nav-footer__wrapper--decor {
+    border-bottom: none;
+  }
+
+  .nav-footer__container {
+    margin: 0;
+  }
 }
