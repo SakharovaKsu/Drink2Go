@@ -1,5 +1,5 @@
 .range {
-  margin-bottom: 70px;
+  margin-bottom: 75px;
 }
 
 .range__title {
@@ -44,9 +44,20 @@
 }
 
 .range__wrapper {
+  position: relative;
   display: flex;
   gap: 44px;
   padding-top: 25px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    left: 127px;
+    top: 43px;
+    background-color: @color-special-dark;
+  }
 }
 
 .range__input {

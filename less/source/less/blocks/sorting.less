@@ -1,20 +1,18 @@
-.catalog {
+.sorting {
   background-color: @bk-colors-lightest;
   padding-top: 50px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.catalog__container {
-  width: calc(100% - 40px);
-  margin: 0 20px;
-  background-size: 100%;
-}
-
-.catalog__title {
+.sorting__title {
   margin: 0;
-  text-align: center;
 }
 
 .sorting__select {
+  max-width: 135px;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -22,6 +20,7 @@
   border: none;
   background-color: transparent;
   appearance: none;
-  max-width: 125px;
   background-image: url("../../img/arrow-select.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
 }

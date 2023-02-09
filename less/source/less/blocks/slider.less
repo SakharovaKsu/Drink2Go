@@ -23,6 +23,10 @@
 }
 
 .slider__back-button {
+  &:focus {
+    background: linear-gradient(to right, @color-light, transparent);
+  }
+
   &:hover {
     background: linear-gradient(to right, @color-light, transparent);
   }
@@ -31,8 +35,8 @@
     background: linear-gradient(to right, @color-base-contrast, transparent);
   }
 
-  &:focus {
-    background: linear-gradient(to right, @color-light, transparent);
+  &:disabled::before {
+    background-image: url("../../img/arrow-disabled.svg");
   }
 }
 
@@ -107,4 +111,8 @@
   font-size: 20px;
   line-height: 32px;
   margin-right: 20px;
+}
+
+.slider__link {
+  font-size: 16px;
 }
