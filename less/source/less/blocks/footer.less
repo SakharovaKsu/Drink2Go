@@ -13,8 +13,45 @@
   background-size: 100%;
 }
 
+.footer__text {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .footer__social {
     margin-bottom: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .footer {
+    display: grid;
+    margin-top: 40px;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "nav social"
+    "logo logo";
+  }
+
+  .footer__social {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    grid-area: nav;
+  }
+
+  .footer__navigation {
+    grid-area: social;
+  }
+
+  .footer__logo-html {
+    grid-area: logo;
+  }
+
+  .footer__text {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    margin-bottom: 40px;
   }
 }

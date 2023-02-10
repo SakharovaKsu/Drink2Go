@@ -108,3 +108,36 @@
     line-height: 36px;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .benefits {
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+
+  .benefits__list {
+    margin-top: 80px;
+    margin-bottom: 0;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .benefits__item {
+    text-align: center;
+    padding: 0;
+    padding-top: 65px;
+  }
+
+  .benefits__icon-one::before,
+  .benefits__icon-two::before {
+    left: 140px;
+  }
+
+  .benefits__icon-three::before,
+  .benefits__icon-four::before {
+    left: 140px;
+  }
+
+  .benefits__subtitle {
+    margin-bottom: 10px;
+  }
+}

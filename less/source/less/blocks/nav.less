@@ -117,3 +117,44 @@
     border-bottom: 1px solid @color-basic-light;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav__logo {
+    order: 0;
+  }
+
+  .nav__picture {
+    width: 82px;
+    height: 36px;
+  }
+
+  .nav__toggle {
+    display: inline-flex;
+    justify-content: flex-end;
+    position: static;
+    order: 3;
+  }
+
+  .nav__list {
+    margin: 0;
+  }
+
+  .nav__link {
+    display: block;
+    padding: 32px 22px;
+  }
+
+  .nav__site {
+    order: 2;
+  }
+
+  .nav__button {
+    display: none;
+  }
+}
