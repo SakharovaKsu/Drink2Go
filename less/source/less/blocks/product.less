@@ -1,7 +1,17 @@
-.product__wrapper {
+.product {
+  padding: 0;
+}
+
+.product__item {
   background-color: @color-light;
   padding: 20px;
   margin-bottom: 20px;
+  list-style-type: none;
+}
+
+.product__link {
+  text-decoration: none;
+  color: @color-dark-text;
 }
 
 .product__img {
@@ -69,6 +79,10 @@
     line-height: 36px;
   }
 
+  .product__item {
+    padding: 50px 30px 30px 30px;
+  }
+
   .product__img {
     width: 130px;
     height: 188px;
@@ -77,6 +91,7 @@
 
 @media (min-width: @desktop-width) {
   .product {
+    grid-template-columns: repeat(3, 1fr);
     margin-bottom: 60px;
   }
 }

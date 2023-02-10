@@ -5,6 +5,9 @@
     <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font">
+    <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" as="font">
+    <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font">
   </head>
   <body class="page-body">
 
@@ -289,98 +292,110 @@
               </div>
 
               <!-- Карточки товаров -->
-              <div class="product">
+                <ul class="product">
 
-                <!-- Карточка товара 1 -->
-                <div class="product__wrapper">
-                  <img class="product__img" src="./img/product/product-1.png" srcset="./img/product/product-1@2x.png 2x" width="130" height="180" alt="Белая банка кофе.">
-                  <h3 class="product__title">Декаф Флэт Уайт</h3>
-                  <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                  <div class="product__container">
-                    <span class="product__desc">225₽</span>
-                    <button class="product__button" type="button">В корзину</button>
-                  </div>
-                </div>
-
-                <!-- Карточка товара 2 -->
-                <div class="product__wrapper">
-                  <img class="product__img" src="./img/product/product-2.png" srcset="./img/product/product-2@2x.png 2x" alt="Феолетовая банка кофе.">
-                  <h3 class="product__title">Декаф Флэт Уайт</h3>
-                  <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                  <div class="product__container">
-                    <span class="product__desc">225₽</span>
-                    <button class="product__button" type="button">В корзину</button>
-                  </div>
-                </div>
-
-                <!-- Карточка товара 3 -->
-                <div class="product__wrapper">
-                  <img class="product__img" src="./img/product/mobile-product-3.png" srcset="./img/product/product-3@2x.png 2x" alt="Черная банка кофе.">
-                  <h3 class="product__title">Декаф Флэт Уайт</h3>
-                  <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                  <div class="product__container">
-                    <span class="product__desc">225₽</span>
-                    <button class="product__button" type="button">В корзину</button>
-                  </div>
-                </div>
-
-                <!-- Карточка товара 4 -->
-                <div class="product__wrapper">
-                  <img class="product__img" src="./img/product/mobile-product-4.png" srcset="./img/product/product-4@2x.png 2x" alt="Розовая банка кофе.">
-                  <h3 class="product__title">Декаф Флэт Уайт</h3>
-                  <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                  <div class="product__container">
-                    <span class="product__desc">225₽</span>
-                    <button class="product__button" type="button">В корзину</button>
-                  </div>
-                </div>
-
-                <!-- Карточка товара 5 -->
-                <div class="product__wrapper">
-                  <img class="product__img" src="./img/product/mobile-product-5.png" srcset="./img/product/product-5@2x.png 2x" alt="Коричневая банка кофе.">
-                  <h3 class="product__title">Декаф Флэт Уайт</h3>
-                  <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                  <div class="product__container">
-                    <span class="product__desc">225₽</span>
-                    <button class="product__button" type="button">В корзину</button>
-                  </div>
-                </div>
-
-                <!-- Карточка товара 6 -->
-                <div class="product__wrapper">
-                  <img class="product__img"  src="./img/product/mobile-product-6.png" srcset="./img/product/product-6@2x.png 2x" alt="Бежевая банка кофе.">
-                  <h3 class="product__title">Декаф Флэт Уайт</h3>
-                  <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                  <div class="product__container">
-                    <span class="product__desc">225₽</span>
-                    <button class="product__button" type="button">В корзину</button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Пагинация -->
-              <div class="pagination">
-                <a class="pagination__button pagination__forward" href="#">
-                  <span class="pagination__text">Назад</span>
-                </a>
-                <ol class="pagination__list">
-                  <li class="pagination__item">
-                    <a class="pagination__link" href="#">1</a>
+                  <!-- Карточка товара 1 -->
+                  <li class="product__item">
+                    <a class="product__link" href="#">
+                      <img class="product__img" src="./img/product/product-1.png" srcset="./img/product/product-1@2x.png 2x" width="130" height="180" alt="Белая банка кофе.">
+                      <h3 class="product__title">Декаф Флэт Уайт</h3>
+                      <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                      <div class="product__container">
+                        <span class="product__desc">225₽</span>
+                        <button class="product__button" type="button">В корзину</button>
+                      </div>
+                    </a>
                   </li>
-                  <li class="pagination__item pagination__item--active">
-                    <a class="pagination__link pagination__link--active" href="#">2</a>
+
+                  <!-- Карточка товара 2 -->
+                  <li class="product__item">
+                    <a class="product__link" href="#">
+                      <img class="product__img" src="./img/product/product-2.png" srcset="./img/product/product-2@2x.png 2x" alt="Феолетовая банка кофе.">
+                      <h3 class="product__title">Декаф Флэт Уайт</h3>
+                      <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                      <div class="product__container">
+                        <span class="product__desc">225₽</span>
+                        <button class="product__button" type="button">В корзину</button>
+                      </div>
+                    </a>
                   </li>
-                  <li class="pagination__item">
-                    <a class="pagination__link" href="#">3</a>
+
+                  <!-- Карточка товара 3 -->
+                  <li class="product__item">
+                    <a class="product__link#">
+                      <img class="product__img" src="./img/product/mobile-product-3.png" srcset="./img/product/product-3@2x.png 2x" alt="Черная банка кофе.">
+                      <h3 class="product__title">Декаф Флэт Уайт</h3>
+                      <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                      <div class="product__container">
+                        <span class="product__desc">225₽</span>
+                        <button class="product__button" type="button">В корзину</button>
+                      </div>
+                    </a>
                   </li>
-                </ol>
-                <a class="pagination__button pagination__back" href="#">
-                  <span class="pagination__text">Вперед</span>
-                </a>
+
+                  <!-- Карточка товара 4 -->
+                  <li class="product__item">
+                    <a class="product__link" href="#">
+                      <img class="product__img" src="./img/product/mobile-product-4.png" srcset="./img/product/product-4@2x.png 2x" alt="Розовая банка кофе.">
+                      <h3 class="product__title">Декаф Флэт Уайт</h3>
+                      <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                      <div class="product__container">
+                        <span class="product__desc">225₽</span>
+                        <button class="product__button" type="button">В корзину</button>
+                      </div>
+                    </a>
+                  </li>
+
+                  <!-- Карточка товара 5 -->
+                  <li class="product__item">
+                    <a class="product__link" href="#">
+                      <img class="product__img" src="./img/product/mobile-product-5.png" srcset="./img/product/product-5@2x.png 2x" alt="Коричневая банка кофе.">
+                      <h3 class="product__title">Декаф Флэт Уайт</h3>
+                      <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                      <div class="product__container">
+                        <span class="product__desc">225₽</span>
+                        <button class="product__button" type="button">В корзину</button>
+                      </div>
+                    </a>
+                  </li>
+
+                  <!-- Карточка товара 6 -->
+                  <li class="product__item">
+                    <a class="product__link" href="#">
+                      <img class="product__img"  src="./img/product/mobile-product-6.png" srcset="./img/product/product-6@2x.png 2x" alt="Бежевая банка кофе.">
+                      <h3 class="product__title">Декаф Флэт Уайт</h3>
+                      <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                      <div class="product__container">
+                        <span class="product__desc">225₽</span>
+                        <button class="product__button" type="button">В корзину</button>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+
+                <!-- Пагинация -->
+                <div class="pagination">
+                  <a class="pagination__button pagination__forward" href="#">
+                    <span class="pagination__text">Назад</span>
+                  </a>
+                  <ol class="pagination__list">
+                    <li class="pagination__item">
+                      <a class="pagination__link" href="#">1</a>
+                    </li>
+                    <li class="pagination__item pagination__item--active">
+                      <a class="pagination__link pagination__link--active" href="#">2</a>
+                    </li>
+                    <li class="pagination__item">
+                      <a class="pagination__link" href="#">3</a>
+                    </li>
+                  </ol>
+                  <a class="pagination__button pagination__back" href="#">
+                    <span class="pagination__text">Вперед</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
       </section>
 
       <!-- Карта -->
