@@ -11,13 +11,16 @@
     <!-- Шапка -->
     <header class="header">
       <nav class="nav nav--closed">
-        <a class="nav__logo" href="index.html">
-          <picture>
-            <source media="(min-width: 1200px)" srcset="./img/logo-tablet.svg 1x">
-            <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg 1x">
-            <img class="nav__picture" src="./img/logo-mobile.svg" width="32" height="36" alt="Логотип Drink2Go.">
-          </picture>
-        </a>
+        <div class="nav__box">
+          <a class="nav__logo" href="index.html">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/logo-tablet-footer.svg">
+              <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg 1x">
+              <img class="nav__picture" src="./img/logo-mobile.svg" width="32" height="36" alt="Логотип Drink2Go.">
+            </picture>
+          </a>
+          <p class="nav__text">Интернет-магазин кофейных напитков</p>
+        </div>
         <div class="nav__toggle">
           <ul class="nav__list">
             <li class="nav__item">
@@ -25,7 +28,7 @@
                 <svg width="16" height="16" aria-label="Иконка аккаунта.">
                   <use xlink:href="./img/icons/stack.svg#user"></use>
                 </svg>
-                <span class="visually-hidden">Аккаунт</span>
+                <span class="nav__desc">Войти</span>
               </a>
             </li>
             <li class="nav__item">
@@ -33,7 +36,7 @@
                 <svg width="16" height="16" aria-label="Иконка корзины.">
                   <use xlink:href="./img/icons/stack.svg#basket"></use>
                 </svg>
-                <span class="visually-hidden">Корзина</span>
+                <span class="nav__desc">Корзина</span>
               </a>
             </li>
           </ul>
@@ -123,6 +126,17 @@
         <button class="slider__forward-button" type="button">
           <span class="visually-hidden">Стрелка вперед</span>
         </button>
+        <div class="slider__dot">
+          <button class="slider__carousel slider__carousel--active" type="button">
+            <span class="visually-hidden">Слайдер</span>
+          </button>
+          <button class="slider__carousel" type="button">
+            <span class="visually-hidden">Слайдер</span>
+          </button>
+          <button class="slider__carousel" type="button">
+            <span class="visually-hidden">Слайдер</span>
+          </button>
+        </div>
       </section>
 
       <!-- Преимущества -->

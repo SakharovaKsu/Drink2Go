@@ -41,12 +41,12 @@
   border: 2px solid @color-special-dark;
   border-radius: 15px;
 
-  ::before {
+  &::before {
     display: block;
     position: absolute;
     content: "";
-    top: 2px;
-    left: 2px;
+    top: 0;
+    left: 0;
     width: 20px;
     height: 20px;
     background: @color-light;
@@ -60,12 +60,6 @@
 }
 
 .checkbox__input[type="checkbox"]:checked + .checkbox__mark::before {
-  position: absolute;
-  content: "";
   top: 0;
-  right: 0;
-  width: 20px;
-  height: 20px;
-  background-color: @color-light;
-  border-radius: 50%;
+  left: 17px;
 }

@@ -16,6 +16,10 @@
   height: 36px;
 }
 
+.nav__text {
+  display: none;
+}
+
 .nav__toggle {
   display: flex;
   position: absolute;
@@ -34,6 +38,10 @@
 
 .nav__link {
   padding: 22px;
+}
+
+.nav__desc {
+  display: none;
 }
 
 .nav__button {
@@ -146,8 +154,7 @@
   }
 
   .nav__link {
-    display: block;
-    padding: 32px 22px;
+    display: flex;
   }
 
   .nav__site {
@@ -156,5 +163,40 @@
 
   .nav__button {
     display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .nav__link {
+    padding: 32px 22px;
+    text-decoration: none;
+  }
+
+  .nav__desc {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: @color-dark-text;
+    margin-left: 8px;
+  }
+
+  .nav__box {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .nav__picture {
+    width: 170px;
+    height: 36px;
+  }
+
+  .nav__text {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    max-width: 130px;
+    margin: 0;
   }
 }
