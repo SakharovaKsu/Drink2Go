@@ -38,6 +38,8 @@
 
   &:disabled::before {
     background-image: url("../../img/arrow-disabled.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
   }
 }
 
@@ -56,6 +58,12 @@
   &:focus {
     background: linear-gradient(to left, @color-light, transparent);
   }
+
+  &:disabled::before {
+    background-image: url("../../img/arrow-disabled.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
 }
 
 .slider__forward-button::before {
@@ -66,6 +74,7 @@
   left: 0;
   transform: scale(-1, -1);
   background-image: url("../../img/arrow.svg");
+  background-position: center center;
 }
 
 .slider__list {
@@ -143,8 +152,7 @@
 
   .slider__back-button,
   .slider__forward-button {
-    margin: 0 20px;
-    background-size: 100%;
+    padding: 0 30px;
   }
 
   .slider__item {
@@ -176,6 +184,14 @@
   .slider {
     position: relative;
     background: @bk-colors-light-warm;
+  }
+
+  .slider__back-button::before {
+    left: 20px;
+  }
+
+  .slider__forward-button::before {
+    left: 20px;
   }
 
   .slider__list {
@@ -221,6 +237,20 @@
     height: 4px;
     background-color: @color-light;
     border: none;
+
+    &:hover,
+    &:focus {
+      background: rgba(120, 89, 207, 0.25);
+    }
+
+    &:focus-visible {
+      outline: none;
+      background: rgba(120, 89, 207, 0.25);
+    }
+
+    &:active {
+      background-color: @color-base-contrast;
+    }
   }
 
   .slider__carousel--active {

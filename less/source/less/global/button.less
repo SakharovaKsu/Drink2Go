@@ -7,15 +7,21 @@
   padding: 8px 20px;
   text-decoration: none;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background: @alt-colors;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:active {
+    background: @alt-colors-dark;
+  }
 }
 
-.button--light {
-  background: @color-light;
-  border: none;
-  border-radius: 4px;
-  line-height: 24px;
-  padding: 8px 20px;
-  color: @color-base-contrast;
-  text-decoration: none;
-  cursor: pointer;
+.button--disabled {
+  background: @color-special-dark;
 }

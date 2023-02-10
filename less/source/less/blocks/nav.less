@@ -8,6 +8,8 @@
 }
 
 .nav__logo {
+  display: block;
+  margin-top: 12px;
   margin-left: 20px;
 }
 
@@ -38,6 +40,10 @@
 
 .nav__link {
   padding: 22px;
+
+  &:active {
+    background-color: @color-basic-light;
+  }
 }
 
 .nav__desc {
@@ -66,6 +72,10 @@
     height: 2px;
     background-color: @color-dark-text;
     box-shadow: 0 6px 0 0 @color-dark-text, 0 12px 0 0 @color-dark-text;
+  }
+
+  &:active {
+    background-color: @color-basic-light;
   }
 }
 
@@ -167,9 +177,22 @@
 }
 
 @media (min-width: @desktop-width) {
+  .nav__logo {
+    margin-top: 0;
+  }
+
   .nav__link {
     padding: 32px 22px;
     text-decoration: none;
+
+    &:hover {
+      fill: @color-base-contrast;
+      color: @color-base-contrast;
+    }
+
+    &:active {
+      color: @color-base-contrast;
+    }
   }
 
   .nav__desc {

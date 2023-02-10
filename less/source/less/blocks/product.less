@@ -59,6 +59,14 @@
   background-repeat: no-repeat;
   background-position: 20px center;
   cursor: pointer;
+
+  &:active {
+    background-color: @alt-colors-dark;
+  }
+
+  &:disabled {
+    background-color: @color-special-dark;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -93,5 +101,17 @@
   .product {
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 60px;
+  }
+
+  .product__button {
+    &:hover,
+    &:focus {
+      background-color: @alt-colors;
+    }
+
+    &:focus-visible {
+      outline: none;
+      background-color: @alt-colors;
+    }
   }
 }

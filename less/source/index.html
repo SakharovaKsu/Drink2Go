@@ -79,8 +79,8 @@
           <li class="slider__item">
             <picture>
               <source media="(min-width: 1200px)" srcset="./img/slider/desktop-slider-product-1.png 1x">
-              <source media="(min-width: 768px)" srcset="./img/slider/tablet-slider-product-1.png 1x">
-              <img class="slider__picture" src="./img/slider/slider-product-1.png" width="280" height="280" alt="Светлая банка кофе с белыми брызгами на заднем фоне.">
+              <source media="(min-width: 768px)" srcset="./img/slider/tablet-slider-product-1.png 1x ./img/slider/tablet-slider-product-1@2x.png 2x">
+              <img class="slider__picture" src="./img/slider/slider-product-1.png" srcset="./img/slider/slider-product-1@2x.png 2x" width="280" height="280" alt="Светлая банка кофе с белыми брызгами на заднем фоне.">
             </picture>
             <div class="slider__wrapper">
               <span class="slider__slogan slogan">Новинка!</span>
@@ -97,9 +97,9 @@
           <!-- Слайдер 2 -->
           <li class="slider__item visually-hidden">
             <picture>
-              <source media="(min-width: 1200px)" srcset="./img/slider/desktop-slider-product-2.png 1x">
-              <source media="(min-width: 768px)" srcset="./img/slider/tablet-slider-product-2.png 1x">
-              <img src="./img/slider/slider-product-2.png" width="280" height="280" alt="Феолетовая банка кофе с веточками лаванды на заднем фоне.">
+              <source media="(min-width: 1200px)" srcset="./img/slider/desktop-slider-product-2.png 1x ./img/slider/desctop-slider-product-2@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="./img/slider/tablet-slider-product-2.png 1x ./img/slider/tablet-slider-product-2@2x.png 2x">
+              <img src="./img/slider/slider-product-2.png" srcset="./img/slider/slider-product-2@2x.png 2x" width="280" height="280" alt="Феолетовая банка кофе с веточками лаванды на заднем фоне.">
             </picture>
             <div>
               <span class="slider__slogan slogan">Новинка!</span>
@@ -114,9 +114,9 @@
           <!-- Слайдер 3 -->
           <li class="slider__item visually-hidden">
             <picture>
-              <source media="(min-width: 1200px)" srcset="./img/slider/desktop-slider-product-3.png 1x">
-              <source media="(min-width: 768px)" srcset="./img/slider/tablet-slider-product-3.png 1x">
-              <img src="./img/slider/slider-product-3.png" width="280" height="280" alt="Черная банка кофе с зернами кофе на заднем фоне.">
+              <source media="(min-width: 1200px)" srcset="./img/slider/desktop-slider-product-3.png 1x ./img/slider/desctop-slider-product-3@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="./img/slider/tablet-slider-product-3.png 1x ./img/slider/tablet-slider-product-3@2x.png 2x">
+              <img src="./img/slider/slider-product-3.png" srcset="./img/slider/slider-product-3@2x.png 2x" width="280" height="280" alt="Черная банка кофе с зернами кофе на заднем фоне.">
             </picture>
             <span class="slider__slogan slogan">Новинка!</span>
             <h2 class="slider__title">Тройной Эспрессо</h2>
@@ -222,7 +222,7 @@
                     </li>
                     <li class="radio__item">
                       <label class="radio__control">
-                        <input class="visually-hidden radio__input" type="radio" name="some-name">
+                        <input class="visually-hidden radio__input" type="radio" name="some-name" disabled>
                         <span class="radio__mark"></span>
                         <span class="radio__label">Без молока</span>
                         </label>
@@ -264,7 +264,7 @@
                     </li>
                     <li class="checkbox__item">
                       <label class="checkbox__control">
-                        <input class="visually-hidden checkbox__input" type="checkbox" name="peru">
+                        <input class="visually-hidden checkbox__input" type="checkbox" name="peru" disabled>
                         <span class="checkbox__mark"></span>
                         <span class="checkbox__label">Перу</span>
                       </label>
@@ -274,7 +274,7 @@
               </div>
               <div class="filter__wrapper">
                 <button class="filter__button button" type="button">Применить фильтр</button>
-                <button class="filter__button button--light" type="button">Сбросить фильтр</button>
+                <button class="filter__button filter__button-light" type="button">Сбросить фильтр</button>
               </div>
             </div>
 
@@ -298,12 +298,12 @@
                   <li class="product__item">
                     <a class="product__link" href="#">
                       <img class="product__img" src="./img/product/product-1.png" srcset="./img/product/product-1@2x.png 2x" width="130" height="180" alt="Белая банка кофе.">
-                      <h3 class="product__title">Декаф Флэт Уайт</h3>
-                      <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                      <div class="product__container">
-                        <span class="product__desc">225₽</span>
-                        <button class="product__button" type="button">В корзину</button>
-                      </div>
+                    </a>
+                    <h3 class="product__title">Декаф Флэт Уайт</h3>
+                    <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                    <a class="product__container">
+                      <span class="product__desc">225₽</span>
+                      <button class="product__button" type="button">В корзину</button>
                     </a>
                   </li>
 
@@ -311,12 +311,12 @@
                   <li class="product__item">
                     <a class="product__link" href="#">
                       <img class="product__img" src="./img/product/product-2.png" srcset="./img/product/product-2@2x.png 2x" alt="Феолетовая банка кофе.">
-                      <h3 class="product__title">Декаф Флэт Уайт</h3>
-                      <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                      <div class="product__container">
-                        <span class="product__desc">225₽</span>
-                        <button class="product__button" type="button">В корзину</button>
-                      </div>
+                    </a>
+                    <h3 class="product__title">Декаф Флэт Уайт</h3>
+                    <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                    <a class="product__container">
+                      <span class="product__desc">225₽</span>
+                      <button class="product__button" type="button">В корзину</button>
                     </a>
                   </li>
 
@@ -324,12 +324,12 @@
                   <li class="product__item">
                     <a class="product__link#">
                       <img class="product__img" src="./img/product/mobile-product-3.png" srcset="./img/product/product-3@2x.png 2x" alt="Черная банка кофе.">
-                      <h3 class="product__title">Декаф Флэт Уайт</h3>
-                      <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                      <div class="product__container">
-                        <span class="product__desc">225₽</span>
-                        <button class="product__button" type="button">В корзину</button>
-                      </div>
+                    </a>
+                    <h3 class="product__title">Декаф Флэт Уайт</h3>
+                    <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                    <a class="product__container">
+                      <span class="product__desc">225₽</span>
+                      <button class="product__button" type="button">В корзину</button>
                     </a>
                   </li>
 
@@ -337,38 +337,38 @@
                   <li class="product__item">
                     <a class="product__link" href="#">
                       <img class="product__img" src="./img/product/mobile-product-4.png" srcset="./img/product/product-4@2x.png 2x" alt="Розовая банка кофе.">
-                      <h3 class="product__title">Декаф Флэт Уайт</h3>
+                    </a>
+                    <h3 class="product__title">Декаф Флэт Уайт</h3>
                       <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                      <div class="product__container">
+                      <a class="product__container">
                         <span class="product__desc">225₽</span>
                         <button class="product__button" type="button">В корзину</button>
-                      </div>
-                    </a>
+                      </a>
                   </li>
 
                   <!-- Карточка товара 5 -->
                   <li class="product__item">
                     <a class="product__link" href="#">
                       <img class="product__img" src="./img/product/mobile-product-5.png" srcset="./img/product/product-5@2x.png 2x" alt="Коричневая банка кофе.">
-                      <h3 class="product__title">Декаф Флэт Уайт</h3>
+                    </a>
+                    <h3 class="product__title">Декаф Флэт Уайт</h3>
                       <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                      <div class="product__container">
+                      <a class="product__container">
                         <span class="product__desc">225₽</span>
                         <button class="product__button" type="button">В корзину</button>
-                      </div>
-                    </a>
+                      </a>
                   </li>
 
                   <!-- Карточка товара 6 -->
                   <li class="product__item">
                     <a class="product__link" href="#">
                       <img class="product__img"  src="./img/product/mobile-product-6.png" srcset="./img/product/product-6@2x.png 2x" alt="Бежевая банка кофе.">
-                      <h3 class="product__title">Декаф Флэт Уайт</h3>
-                      <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                      <div class="product__container">
-                        <span class="product__desc">225₽</span>
-                        <button class="product__button" type="button">В корзину</button>
-                      </div>
+                    </a>
+                    <h3 class="product__title">Декаф Флэт Уайт</h3>
+                    <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                    <a class="product__container">
+                      <span class="product__desc">225₽</span>
+                      <button class="product__button" type="button">В корзину</button>
                     </a>
                   </li>
                 </ul>

@@ -1,4 +1,5 @@
-.filter__button {
+.filter__button,
+.filter__button-light {
   width: 150px;
   font-size: 13px;
   display: block;
@@ -8,6 +9,27 @@
 
   &:last-child {
     margin-top: 24px;
+  }
+
+  &:active {
+    color: @color-light;
+    background-color: @alt-colors-dark;
+  }
+}
+
+.filter__button:disabled {
+  background-color: @color-special-dark;
+}
+
+.filter__button-light {
+  border: none;
+  border-radius: 4px;
+  color: @color-base-contrast;
+  background: @color-light;
+
+  &:disabled {
+    color: @color-light;
+    background-color: @alt-colors-light;
   }
 }
 
@@ -40,5 +62,19 @@
   .filter__wrapper {
     margin-top: 0;
     gap: 18px;
+  }
+
+  .filter__button {
+    &:hover,
+    &:focus {
+      color: @color-light;
+      background-color: @alt-colors;
+    }
+
+    &:focus-visible {
+      outline: none;
+      color: @color-light;
+      background-color: @alt-colors;
+    }
   }
 }

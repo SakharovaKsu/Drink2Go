@@ -9,6 +9,10 @@
   text-align: center;
   padding: 20px 0;
   border-bottom: 1px solid @color-basic-light;
+
+  &:active {
+    background-color: @color-basic-light;
+  }
 }
 
 .site-list__link {
@@ -48,5 +52,28 @@
 
   .site-list__link--active {
     color: @color-base-contrast;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list__item {
+    &:active {
+      background-color: @color-basic-light;
+    }
+  }
+
+  .site-list__link {
+    &:hover,
+    &:focus {
+      color: @color-base-contrast;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:active {
+      color: @color-base-contrast;
+    }
   }
 }
