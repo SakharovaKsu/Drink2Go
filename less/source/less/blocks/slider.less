@@ -4,27 +4,36 @@
   background-color: @bk-colors-light-warm;
 }
 
-.slider__back-button,
-.slider__forward-button {
+.slider__prev-button,
+.slider__next-button {
   position: absolute;
   height: 100%;
   width: 20px;
+  top: 0;
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 
-.slider__forward-button::after {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
+.slider__prev-button {
   left: 0;
-  background-image: url("../../img/arrow.svg");
-}
 
-.slider__back-button {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 0;
+    background-image: url("../../img/arrow.svg");
+  }
+
   &:focus {
+    background: linear-gradient(to right, @color-light, transparent);
+  }
+
+  &:focus-visible {
+    outline: none;
     background: linear-gradient(to right, @color-light, transparent);
   }
 
@@ -43,18 +52,26 @@
   }
 }
 
-.slider__forward-button {
-  ::before {
+.slider__next-button {
+  right: 0;
+
+  &::after {
     content: "";
     position: absolute;
     width: 20px;
     height: 20px;
-    top: 0;
-    left: 0;
+    top: 50%;
+    right: 0;
+    background-image: url("../../img/arrow.svg");
     transform: scale(-1, -1);
   }
 
   &:focus {
+    background: linear-gradient(to left, @color-light, transparent);
+  }
+
+  &:focus-visible {
+    outline: none;
     background: linear-gradient(to left, @color-light, transparent);
   }
 
@@ -80,6 +97,7 @@
   padding-top: 20px;
   padding-bottom: 60px;
   list-style-type: none;
+  margin: 0 auto;
 }
 
 .slider__item {
@@ -145,9 +163,17 @@
     background: linear-gradient(180deg, @bk-colors-light-warm 640px, @color-light 0);
   }
 
-  .slider__back-button,
-  .slider__forward-button {
+  .slider__prev-button,
+  .slider__next-button {
     padding: 0 30px;
+  }
+
+  .slider__prev-button::after {
+    left: 50%;
+  }
+
+  .slider__next-button::after {
+    right: 50%;
   }
 
   .slider__item {
@@ -183,11 +209,11 @@
     background: @bk-colors-light-warm;
   }
 
-  .slider__back-button::before {
+  .slider__prev-button::before {
     left: 20px;
   }
 
-  .slider__forward-button::before {
+  .slider__next-button::before {
     left: 20px;
   }
 
@@ -234,6 +260,7 @@
     height: 4px;
     background-color: @color-light;
     border: none;
+    cursor: pointer;
 
     &:hover,
     &:focus {

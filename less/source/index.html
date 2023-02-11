@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- <link rel="stylesheet" href="./js//vendor/leaflet/leaflet.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/> -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="./js/leaflet/dist/leaflet.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font">
     <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" as="font">
     <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font">
@@ -73,7 +73,7 @@
       <!-- Слайдеры -->
       <div class="slider swiper mySwiper">
         <div class="swiper-wrapper">
-          <button class="slider__back-button swiper-button-prev" type="button">
+          <button class="slider__prev-button swiper-button-prev" type="button">
             <span class="visually-hidden">Стрелка назад</span>
           </button>
           <ol class="slider__list swiper-wrapper">
@@ -81,6 +81,9 @@
             <!-- Слайдер 1 -->
               <li class="slider__item swiper-slide">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="./img/slide/desktop-slider-product-1.webp, ./img/slider/desktop-slider-product-1@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/slide/tablet-slider-product-1.webp, ./img/slider/tablet-slider-product-1@2x.webp 2x">
+                  <source type="image/webp" srcset="./img/slider/slider-product-1.webp, ./img/slider/slider-product-1@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="./img/slider/desktop-slider-product-1.png 1x ./img/slider/desktop-slider-product-1@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="./img/slider/tablet-slider-product-1.png 1x ./img/slider/tablet-slider-product-1@2x.png 2x">
                   <img class="slider__picture" src="./img/slider/slider-product-1.png" srcset="./img/slider/slider-product-1@2x.png 2x" width="280" height="280" alt="Светлая банка кофе с белыми брызгами на заднем фоне.">
@@ -98,8 +101,11 @@
               </li>
 
             <!-- Слайдер 2 -->
-              <li class="slider__item swiper-slide">
+              <li class="slider__item visually-hidden swiper-slide">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="./img/slide/desktop-slider-product-2.webp, ./img/slider/desktop-slider-product-2@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/slide/tablet-slider-product-2.webp, ./img/slider/tablet-slider-product-2@2x.webp 2x">
+                  <source type="image/webp" srcset="./img/slider/slider-product-2.webp, ./img/slider/slider-product-2@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="./img/slider/desktop-slider-product-2.png 1x ./img/slider/desktop-slider-product-2@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="./img/slider/tablet-slider-product-2.png 1x ./img/slider/tablet-slider-product-2@2x.png 2x">
                   <img class="slider__picture" src="./img/slider/slider-product-2.png" srcset="./img/slider/slider-product-2@2x.png 2x" width="280" height="280" alt="Феолетовая банка кофе с веточками лаванды на заднем фоне.">
@@ -117,8 +123,11 @@
               </li>
 
             <!-- Слайдер 3 -->
-              <li class="slider__item swiper-slide">
+              <li class="slider__item visually-hidden swiper-slide">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="./img/slide/desktop-slider-product-3.webp, ./img/slider/desktop-slider-product-3@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/slide/tablet-slider-product-3.webp, ./img/slider/tablet-slider-product-3@2x.webp 2x">
+                  <source type="image/webp" srcset="./img/slider/slider-product-3.webp, ./img/slider/slider-product-3@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="./img/slider/desktop-slider-product-3.png 1x ./img/slider/desktop-slider-product-3@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="./img/slider/tablet-slider-product-3.png 1x ./img/slider/tablet-slider-product-3@2x.png 2x">
                   <img class="slider__picture" src="./img/slider/slider-product-3.png" srcset="./img/slider/slider-product-3@2x.png 2x" width="280" height="280" alt="Черная банка кофе с зернами кофе на заднем фоне.">
@@ -135,7 +144,7 @@
                 </div>
               </li>
           </ol>
-          <button class="slider__forward-button swiper-button-next" type="button">
+          <button class="slider__next-button swiper-button-next" type="button">
             <span class="visually-hidden">Стрелка вперед</span>
           </button>
           <div class="slider__dot swiper-pagination">
@@ -185,7 +194,7 @@
           <div class="catalog__box">
 
             <!-- Фильтр -->
-            <div class="filter">
+            <form class="filter" action="https://echo.htmlacademy.ru/" method="post">
               <div class="catalog__wrapper">
                 <div class="filter__range range">
                   <h3 class="range__title">Цена</h3>
@@ -286,7 +295,7 @@
                 <button class="filter__button button" type="button">Применить фильтр</button>
                 <button class="filter__button filter__button-light" type="button">Сбросить фильтр</button>
               </div>
-            </div>
+            </form>
 
             <div class="catalog__product">
 
@@ -307,87 +316,105 @@
                   <!-- Карточка товара 1 -->
                   <li class="product__item">
                     <a class="product__link" href="#">
-                      <img class="product__img" src="./img/product/product-1.png" srcset="./img/product/product-1@2x.png 2x" width="130" height="180" alt="Белая банка кофе.">
+                      <picture>
+                        <source type="image/webp" srcset="./img/product/product-1.webp, ./img/product/product-1@2x.webp 2x">
+                        <img class="product__img" src="./img/product/product-1.png" srcset="./img/product/product-1@2x.png 2x" width="130" height="180" alt="Белая банка кофе.">
+                      </picture>
                     </a>
                     <h3 class="product__title">Декаф Флэт Уайт</h3>
                     <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                    <a class="product__container">
+                    <div class="product__container">
                       <span class="product__desc">225₽</span>
                       <button class="product__button" type="button">В корзину</button>
-                    </a>
+                    </div>
                   </li>
 
                   <!-- Карточка товара 2 -->
                   <li class="product__item">
                     <a class="product__link" href="#">
-                      <img class="product__img" src="./img/product/product-2.png" srcset="./img/product/product-2@2x.png 2x" alt="Феолетовая банка кофе.">
+                      <picture>
+                        <source type="image/webp" srcset="./img/product/product-2.webp, ./img/product/product-2@2x.webp 2x">
+                        <img class="product__img" src="./img/product/product-2.png" srcset="./img/product/product-2@2x.png 2x" width="130" height="180" alt="Феолетовая банка кофе.">
+                      </picture>
                     </a>
                     <h3 class="product__title">Декаф Флэт Уайт</h3>
                     <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                    <a class="product__container">
+                    <div class="product__container">
                       <span class="product__desc">225₽</span>
                       <button class="product__button" type="button">В корзину</button>
-                    </a>
+                    </div>
                   </li>
 
                   <!-- Карточка товара 3 -->
                   <li class="product__item">
                     <a class="product__link#">
-                      <img class="product__img" src="./img/product/mobile-product-3.png" srcset="./img/product/product-3@2x.png 2x" alt="Черная банка кофе.">
+                      <picture>
+                        <source type="image/webp" srcset="./img/product/product-3.webp, ./img/product/product-3@2x.webp 2x">
+                        <img class="product__img" src="./img/product/product-3.png" srcset="./img/product/product-3@2x.png 2x" width="130" height="180" alt="Черная банка кофе.">
+                      </picture>
                     </a>
                     <h3 class="product__title">Декаф Флэт Уайт</h3>
                     <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                    <a class="product__container">
+                    <div class="product__container">
                       <span class="product__desc">225₽</span>
                       <button class="product__button" type="button">В корзину</button>
-                    </a>
+                    </div>
                   </li>
 
                   <!-- Карточка товара 4 -->
                   <li class="product__item">
                     <a class="product__link" href="#">
-                      <img class="product__img" src="./img/product/mobile-product-4.png" srcset="./img/product/product-4@2x.png 2x" alt="Розовая банка кофе.">
+                      <picture>
+                        <source type="image/webp" srcset="./img/product/product-4.webp, ./img/product/product-4@2x.webp 2x">
+                        <img class="product__img" src="./img/product/product-4.png" srcset="./img/product/product-4@2x.png 2x" width="130" height="180" alt="Розовая банка кофе.">
+                      </picture>
                     </a>
                     <h3 class="product__title">Декаф Флэт Уайт</h3>
-                      <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                      <a class="product__container">
-                        <span class="product__desc">225₽</span>
-                        <button class="product__button" type="button">В корзину</button>
-                      </a>
+                    <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                    <div class="product__container">
+                      <span class="product__desc">225₽</span>
+                      <button class="product__button" type="button">В корзину</button>
+                    </div>
                   </li>
 
                   <!-- Карточка товара 5 -->
                   <li class="product__item">
                     <a class="product__link" href="#">
-                      <img class="product__img" src="./img/product/mobile-product-5.png" srcset="./img/product/product-5@2x.png 2x" alt="Коричневая банка кофе.">
+                      <picture>
+                        <source type="image/webp" srcset="./img/product/product-5.webp, ./img/product/product-5@2x.webp 2x">
+                        <img class="product__img" src="./img/product/product-5.png" srcset="./img/product/product-1@2x.png 2x" width="130" height="180" alt="Коричневая банка кофе.">
+                      </picture>
                     </a>
                     <h3 class="product__title">Декаф Флэт Уайт</h3>
-                      <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                      <a class="product__container">
-                        <span class="product__desc">225₽</span>
-                        <button class="product__button" type="button">В корзину</button>
-                      </a>
+                    <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                    <div class="product__container">
+                      <span class="product__desc">225₽</span>
+                      <button class="product__button" type="button">В корзину</button>
+                    </div>
                   </li>
 
                   <!-- Карточка товара 6 -->
                   <li class="product__item">
                     <a class="product__link" href="#">
-                      <img class="product__img"  src="./img/product/mobile-product-6.png" srcset="./img/product/product-6@2x.png 2x" alt="Бежевая банка кофе.">
+                      <picture>
+                        <source type="image/webp" srcset="./img/product/product-6.webp, ./img/product/product-6@2x.webp 2x">
+                        <img class="product__img" src="./img/product/product-6.png" srcset="./img/product/product-6@2x.png 2x" width="130" height="180" alt="Бежевая банка кофе.">
+                      </picture>
                     </a>
                     <h3 class="product__title">Декаф Флэт Уайт</h3>
                     <p class="product__text">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                    <a class="product__container">
+                    <div class="product__container">
                       <span class="product__desc">225₽</span>
                       <button class="product__button" type="button">В корзину</button>
-                    </a>
+                    </div>
                   </li>
                 </ul>
 
                 <!-- Пагинация -->
                 <div class="pagination">
-                  <a class="pagination__button pagination__forward" href="#">
+                  <button class="pagination__button pagination__forward" type="button">
                     <span class="pagination__text">Назад</span>
-                  </a>
+                  </button>
                   <ol class="pagination__list">
                     <li class="pagination__item">
                       <a class="pagination__link" href="#">1</a>
@@ -399,9 +426,9 @@
                       <a class="pagination__link" href="#">3</a>
                     </li>
                   </ol>
-                  <a class="pagination__button pagination__back" href="#">
+                  <button class="pagination__button pagination__back" type="button">
                     <span class="pagination__text">Вперед</span>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -409,14 +436,14 @@
       </section>
 
       <!-- Карта -->
-      <section class="map__box">
+      <section class="map">
         <h2 class="visually-hidden">Карта</h2>
-        <div id="map" style="width: 320px; height: 420px;"></div>
-        <!-- <picture>
+        <!-- <div id="map" style="width: 320px; height: 420px;"></div> -->
+        <picture>
           <source media="(min-width: 1200px)" srcset="./img/map-desctop.png 1x">
           <source media="(min-width: 768px)" srcset="./img/map-tablet.png 1x">
           <img class="map__picture" src="./img/map.png" width="320" height="420" alt="Изображение карты.">
-        </picture> -->
+        </picture>
       </section>
 
       <!-- Футер -->
@@ -428,7 +455,7 @@
             <picture>
               <source media="(min-width: 1200px)" srcset="./img/logo-tablet-footer.svg 1x">
               <source media="(min-width: 768px)" srcset="./img/logo-tablet-footer.svg 1x">
-              <img src="./img/logo-mobile-footer.svg" alt="Логотип Drink2Go.">
+              <img src="./img/logo-mobile-footer.svg" width="82" height="36" alt="Логотип Drink2Go.">
             </picture>
           </a>
           <p class="footer__text">Интернет-магазин кофейных напитков</p>
@@ -521,8 +548,8 @@
         </div>
       </footer>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="./js/leaflet/dist/leaflet.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
+    <!-- <script src="./js/vendor/leaflet/leaflet.js"></script> -->
     <script src="./js/script.js" defer></script>
   </body>
 </html>

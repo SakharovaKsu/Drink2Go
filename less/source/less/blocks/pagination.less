@@ -11,6 +11,7 @@
 .pagination__button {
   position: relative;
   background-color: @color-light;
+  border: none;
   border-radius: 4px;
   width: 40px;
   height: 40px;
@@ -23,14 +24,11 @@
     color: @color-light;
     background-color: @alt-colors-dark;
   }
-}
 
-.pagination__button--disabled {
-  background-color: @color-special-dark;
-}
-
-.pagination__button--disabled .pagination__text {
-  color: @color-light;
+  &:disabled {
+    background-color: @color-special-dark;
+    color: @color-light;
+  }
 }
 
 .pagination__back {
@@ -160,13 +158,20 @@
     }
   }
 
-  .pagination__button:hover .pagination__text,
-  .pagination__button:focus .pagination__text {
+  .pagination__button:hover > .pagination__text,
+  .pagination__button:focus > .pagination__text {
     color: @color-light;
   }
 
-  .pagination__item:hover .pagination__link,
-  .pagination__item:focus .pagination__link {
+  .pagination__item:hover + .pagination__link,
+  .pagination__item:focus + .pagination__link {
     color: @color-light;
+    background-color: @alt-colors;
+  }
+
+  .pagination__item:focus-visible + .pagination__link {
+    outline: none;
+    color: @color-light;
+    background-color: @alt-colors;
   }
 }
