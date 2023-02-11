@@ -65,9 +65,19 @@
   color: @color-special-dark;
 }
 
+.radio__input[type="radio"]:checked:disabled + .radio__mark {
+  border: 2px solid @alt-colors-light;
+}
+
+.radio__input[type="radio"]:checked:disabled + .radio__mark::before {
+  background-color: @alt-colors-light;
+  top: 2px;
+  left: 2px;
+}
+
 @media (min-width: @desktop-width) {
-  .radio__input:hover + .radio__mark,
-  .radio__input:focus + .radio__mark {
+  .radio__input:not(:disabled):not(:checked):hover + .radio__mark,
+  .radio__input:not(:disabled):not(:checked):focus + .radio__mark {
     border-color: @color-base-contrast;
 
     &::before {
@@ -82,7 +92,7 @@
     }
   }
 
-  .radio__input:focus-visible + .radio__mark {
+  .radio__input:not(:disabled):not(:checked):focus-visible + .radio__mark {
     border: @color-special-dark;
     color: @color-special-dark;
 

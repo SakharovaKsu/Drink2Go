@@ -1,8 +1,3 @@
-import { main } from "./main.js";
-// import * as say from "./map.js";
-
-main();
-
 const map = L.map('map')
   .setView({
     lat: 59.968137,

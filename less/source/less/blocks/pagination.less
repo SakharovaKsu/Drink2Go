@@ -9,6 +9,7 @@
 }
 
 .pagination__button {
+  position: relative;
   background-color: @color-light;
   border-radius: 4px;
   width: 40px;
@@ -18,24 +19,42 @@
   background-position: center center;
   cursor: pointer;
 
-  &:active {
+  &:active .pagination__text {
     color: @color-light;
     background-color: @alt-colors-dark;
   }
+}
 
-  &:disabled {
-    color: @color-light;
-    background-color: @color-special-dark;
-  }
+.pagination__button--disabled {
+  background-color: @color-special-dark;
+}
+
+.pagination__button--disabled .pagination__text {
+  color: @color-light;
 }
 
 .pagination__back {
   transform: scale(-1, -1);
 }
 
-.pagination__link {
-  text-decoration: none;
-  color: @color-base-contrast;
+.pagination__forward:active,
+.pagination__back:active {
+  background-color: @alt-colors-dark;
+  background-image: url("../../img/arrow-pagination-status.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.pagination__forward--disabled,
+.pagination__back--dasabled {
+  background-color: @color-special-dark;
+  background-image: url("../../img/arrow-pagination-status.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.pagination__back--dasabled {
+  transform: scale(-1, -1);
 }
 
 .pagination__list {
@@ -46,22 +65,13 @@
 }
 
 .pagination__item {
+  position: relative;
   background-color: @color-light;
   border-radius: 4px;
   width: 40px;
   height: 40px;
   text-align: center;
   padding: 8px;
-
-  &:active {
-    color: @color-light;
-    background-color: @alt-colors-dark;
-  }
-}
-
-.pagination__item:active .pagination__link {
-  background-color: @alt-colors-dark;
-  color: @color-light;
 }
 
 .pagination__item--disabled {
@@ -76,9 +86,32 @@
   background-color: transparent;
 }
 
+.pagination__item > .pagination__link:active::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: -10px;
+  right: -17px;
+  background-color: @alt-colors-dark;
+  border-radius: 4px;
+  z-index: -1;
+}
+
 .pagination__link--active {
   color: @color-dark-text;
   font-weight: 600;
+}
+
+.pagination__link {
+  text-decoration: none;
+  color: @color-base-contrast;
+
+  &:active {
+    position: relative;
+    color: @color-light;
+    z-index: 2;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -101,7 +134,7 @@
   .pagination__back {
     transform: scale(1, 1);
     padding: 8px 52px 8px 43px;
-    border-radius: 0 0 4px 4px;
+    border-radius: 4px 0 0 4px;
   }
 
   .pagination__text {

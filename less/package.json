@@ -52,5 +52,8 @@
   "engines": {
     "node": ">=16.13.0"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "leaflet": "^1.9.3"
+  }
 }

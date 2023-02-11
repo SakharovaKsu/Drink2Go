@@ -5,6 +5,7 @@
     <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../less/node_modules/leaflet/leaflet.css">
     <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font">
     <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" as="font">
     <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font">
@@ -76,9 +77,9 @@
         <ol class="slider__list">
 
           <!-- Слайдер 1 -->
-          <li class="slider__item">
+          <li class="slider__item visually-hidden">
             <picture>
-              <source media="(min-width: 1200px)" srcset="./img/slider/desktop-slider-product-1.png 1x">
+              <source media="(min-width: 1200px)" srcset="./img/slider/desktop-slider-product-1.png 1x ./img/slider/desktop-slider-product-1@2x.png 2x">
               <source media="(min-width: 768px)" srcset="./img/slider/tablet-slider-product-1.png 1x ./img/slider/tablet-slider-product-1@2x.png 2x">
               <img class="slider__picture" src="./img/slider/slider-product-1.png" srcset="./img/slider/slider-product-1@2x.png 2x" width="280" height="280" alt="Светлая банка кофе с белыми брызгами на заднем фоне.">
             </picture>
@@ -97,7 +98,7 @@
           <!-- Слайдер 2 -->
           <li class="slider__item visually-hidden">
             <picture>
-              <source media="(min-width: 1200px)" srcset="./img/slider/desktop-slider-product-2.png 1x ./img/slider/desctop-slider-product-2@2x.png 2x">
+              <source media="(min-width: 1200px)" srcset="./img/slider/desktop-slider-product-2.png 1x ./img/slider/desktop-slider-product-2@2x.png 2x">
               <source media="(min-width: 768px)" srcset="./img/slider/tablet-slider-product-2.png 1x ./img/slider/tablet-slider-product-2@2x.png 2x">
               <img src="./img/slider/slider-product-2.png" srcset="./img/slider/slider-product-2@2x.png 2x" width="280" height="280" alt="Феолетовая банка кофе с веточками лаванды на заднем фоне.">
             </picture>
@@ -112,18 +113,20 @@
           </li>
 
           <!-- Слайдер 3 -->
-          <li class="slider__item visually-hidden">
+          <li class="slider__item">
             <picture>
-              <source media="(min-width: 1200px)" srcset="./img/slider/desktop-slider-product-3.png 1x ./img/slider/desctop-slider-product-3@2x.png 2x">
+              <source media="(min-width: 1200px)" srcset="./img/slider/desktop-slider-product-3.png 1x ./img/slider/desktop-slider-product-3@2x.png 2x">
               <source media="(min-width: 768px)" srcset="./img/slider/tablet-slider-product-3.png 1x ./img/slider/tablet-slider-product-3@2x.png 2x">
               <img src="./img/slider/slider-product-3.png" srcset="./img/slider/slider-product-3@2x.png 2x" width="280" height="280" alt="Черная банка кофе с зернами кофе на заднем фоне.">
             </picture>
-            <span class="slider__slogan slogan">Новинка!</span>
-            <h2 class="slider__title">Тройной Эспрессо</h2>
-            <p class="slider__text about-text">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
-            <span class="slider__desc"><s>395₽</s></span>
-            <span class="slider__text-desc">375₽</span>
-            <a class="slider__link button" href="#">Заказать</a>
+            <div>
+              <span class="slider__slogan slogan">Новинка!</span>
+              <h2 class="slider__title">Тройной Эспрессо</h2>
+              <p class="slider__text about-text">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+              <span class="slider__desc"><s>395₽</s></span>
+              <span class="slider__text-desc">375₽</span>
+              <a class="slider__link button" href="#">Заказать</a>
+            </div>
           </li>
         </ol>
         <button class="slider__forward-button" type="button">
@@ -399,13 +402,14 @@
       </section>
 
       <!-- Карта -->
-      <section class="map">
+      <section class="map__box">
         <h2 class="visually-hidden">Карта</h2>
-        <picture>
+        <div id="map" style="width: 320px; height: 420px;"></div>
+        <!-- <picture>
           <source media="(min-width: 1200px)" srcset="./img/map-desctop.png 1x">
           <source media="(min-width: 768px)" srcset="./img/map-tablet.png 1x">
           <img class="map__picture" src="./img/map.png" width="320" height="420" alt="Изображение карты.">
-        </picture>
+        </picture> -->
       </section>
 
       <!-- Футер -->
@@ -510,6 +514,7 @@
         </div>
       </footer>
     </main>
-    <script src="./js/script.js" defer></script>
+    <script src="../node_modules/leaflet/leaflet.js"></script>
+    <script src="./js/script.js" type="module" defer></script>
   </body>
 </html>

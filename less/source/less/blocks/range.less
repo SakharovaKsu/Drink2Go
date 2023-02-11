@@ -107,7 +107,8 @@
 
 @media (min-width: @desktop-width) {
   .range__toggle {
-    &:hover::before {
+    &:hover::before,
+    &:focus::before {
       position: absolute;
       content: "";
       width: 16px;
@@ -115,7 +116,15 @@
       top: 2px;
       left: 2px;
       border-radius: 50%;
-      background-color: @color-basic-light;
+      background: rgba(120, 89, 207, 0.25);
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:focus-visible::before {
+      background: rgba(120, 89, 207, 0.25);
     }
   }
 
@@ -126,6 +135,7 @@
 
     &:focus-visible {
       outline: none;
+      border-color: @alt-colors-dark;
     }
   }
 }
