@@ -1,9 +1,15 @@
-import { main } from "./main.js";
-import { slider } from "./slider.js";
+// Main
+let navMain = document.querySelector('.nav');
+let navToggle = document.querySelector('.nav__button');
 
-main();
-slider();
+navMain.classList.remove('nav--nojs');
 
+navToggle.addEventListener('click', function () {
+    navMain.classList.toggle('nav--closed');
+    navMain.classList.toggle('nav--opened');
+});
+
+// Map
 const map = L.map('map')
   .setView({
     lat: 59.968137,
@@ -34,3 +40,17 @@ const marker = L.marker(
 );
 
 marker.addTo(map);
+
+Slider
+const swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+  el: ".swiper-pagination",
+},
+  mousewheel: true,
+  keyboard: true,
+});

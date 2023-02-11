@@ -14,7 +14,7 @@
   cursor: pointer;
 }
 
-.slider__back-button::before {
+.slider__forward-button::after {
   content: "";
   position: absolute;
   width: 20px;
@@ -44,8 +44,15 @@
 }
 
 .slider__forward-button {
-  right: 0;
-  top: 0;
+  ::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    transform: scale(-1, -1);
+  }
 
   &:focus {
     background: linear-gradient(to left, @color-light, transparent);
@@ -66,20 +73,8 @@
   }
 }
 
-.slider__forward-button::before {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  left: 0;
-  transform: scale(-1, -1);
-  background-image: url("../../img/arrow.svg");
-  background-position: center center;
-}
-
 .slider__list {
   width: calc(100% - 40px);
-  margin: 0 20px;
   background-size: 100%;
   padding: 0;
   padding-top: 20px;

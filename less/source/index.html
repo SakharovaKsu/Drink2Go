@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="./js/leaflet/dist/leaflet.css">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font">
     <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" as="font">
     <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font">
@@ -73,14 +73,13 @@
       <!-- Слайдеры -->
       <div class="slider swiper mySwiper">
         <div class="swiper-wrapper">
-          <button class="slider__back-button swiper-button-next" type="button">
+          <button class="slider__back-button swiper-button-prev" type="button">
             <span class="visually-hidden">Стрелка назад</span>
           </button>
-          <ol class="slider__list">
+          <ol class="slider__list swiper-wrapper">
 
             <!-- Слайдер 1 -->
-            <div class="swiper-slide">
-              <li class="slider__item">
+              <li class="slider__item swiper-slide">
                 <picture>
                   <source media="(min-width: 1200px)" srcset="./img/slider/desktop-slider-product-1.png 1x ./img/slider/desktop-slider-product-1@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="./img/slider/tablet-slider-product-1.png 1x ./img/slider/tablet-slider-product-1@2x.png 2x">
@@ -97,11 +96,9 @@
                   </div>
                 </div>
               </li>
-            </div>
 
             <!-- Слайдер 2 -->
-            <div class="swiper-wrapper">
-              <li class="slider__item">
+              <li class="slider__item swiper-slide">
                 <picture>
                   <source media="(min-width: 1200px)" srcset="./img/slider/desktop-slider-product-2.png 1x ./img/slider/desktop-slider-product-2@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="./img/slider/tablet-slider-product-2.png 1x ./img/slider/tablet-slider-product-2@2x.png 2x">
@@ -118,11 +115,9 @@
                   </div>
                 </div>
               </li>
-            </div>
 
             <!-- Слайдер 3 -->
-            <div class="swiper-wrapper">
-              <li class="slider__item">
+              <li class="slider__item swiper-slide">
                 <picture>
                   <source media="(min-width: 1200px)" srcset="./img/slider/desktop-slider-product-3.png 1x ./img/slider/desktop-slider-product-3@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="./img/slider/tablet-slider-product-3.png 1x ./img/slider/tablet-slider-product-3@2x.png 2x">
@@ -139,9 +134,8 @@
                   </div>
                 </div>
               </li>
-            </div>
           </ol>
-          <button class="slider__forward-button swiper-button-prev" type="button">
+          <button class="slider__forward-button swiper-button-next" type="button">
             <span class="visually-hidden">Стрелка вперед</span>
           </button>
           <div class="slider__dot swiper-pagination">
@@ -527,8 +521,8 @@
         </div>
       </footer>
     </main>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/leaflet/dist/leaflet.js"></script>
-    <script src="./js/script.js" type="module" defer></script>
+    <script src="./js/script.js" defer></script>
   </body>
 </html>
