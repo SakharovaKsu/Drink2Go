@@ -47,16 +47,16 @@
   right: 0;
   top: 0;
 
+  &:focus {
+    background: linear-gradient(to left, @color-light, transparent);
+  }
+
   &:hover {
     background: linear-gradient(to left, @color-light, transparent);
   }
 
   &:active {
     background: linear-gradient(to left, @color-base-contrast, transparent);
-  }
-
-  &:focus {
-    background: linear-gradient(to left, @color-light, transparent);
   }
 
   &:disabled::before {
@@ -178,6 +178,7 @@
   .slider__text {
     font-size: 20px;
     line-height: 32px;
+    max-width: 650px;
   }
 }
 
