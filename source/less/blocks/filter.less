@@ -92,7 +92,19 @@
   }
 
   .filter__button-light {
-    :active {
+    &:hover,
+    &:focus {
+      color: @color-light;
+      background-color: @alt-colors;
+    }
+
+    &:focus-visible {
+      outline: none;
+      color: @color-light;
+      background-color: @alt-colors;
+    }
+
+    &:active {
       color: @color-light;
       background-color: @alt-colors-dark;
     }
