@@ -1,0 +1,123 @@
+.product {
+  padding: 0;
+}
+
+.product__item {
+  background-color: @color-light;
+  padding: 38px 20px 20px 20px;
+  margin-bottom: 20px;
+  list-style-type: none;
+}
+
+.product__link {
+  text-decoration: none;
+  color: @color-dark-text;
+}
+
+.product__img {
+  display: block;
+  margin: 0 auto;
+  width: 130px;
+  height: 188px;
+}
+
+.product__title {
+  margin: 24px 0 4px 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.product__text {
+  margin: 0;
+  margin-bottom: 18px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.product__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product__desc {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.product__button {
+  display: block;
+  background-color: @color-base-contrast;
+  border: none;
+  border-radius: 5px;
+  color: @color-light;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 8px 20px 8px 57px;
+  background-image: url("../../img/basket-button.svg");
+  background-repeat: no-repeat;
+  background-position: 20px center;
+  cursor: pointer;
+
+  &:active {
+    background-color: @alt-colors-dark;
+  }
+
+  &:disabled {
+    background-color: @color-special-dark;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 0;
+  }
+
+  .product__wrapper {
+    margin-bottom: 0;
+    padding: 50px 30px 30px 30px;
+  }
+
+  .product__title {
+    margin: 30px 0 10px 0;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .product__item {
+    padding: 50px 30px 30px 30px;
+    margin-bottom: 0;
+  }
+
+  .product__img {
+    width: 130px;
+    height: 188px;
+  }
+
+  .product__text {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 60px;
+  }
+
+  .product__button {
+    &:hover,
+    &:focus {
+      background-color: @alt-colors;
+    }
+
+    &:focus-visible {
+      outline: none;
+      background-color: @alt-colors;
+    }
+  }
+}
