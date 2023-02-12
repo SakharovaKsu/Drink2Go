@@ -17,7 +17,8 @@
   }
 }
 
-.filter__button:disabled {
+.filter__button:disabled,
+.filter__button[disabled] {
   background-color: @color-special-dark;
 }
 
@@ -77,6 +78,29 @@
       outline: none;
       color: @color-light;
       background-color: @alt-colors;
+    }
+
+    &:active {
+      color: @color-light;
+      background-color: @alt-colors-dark;
+    }
+
+    &[disabled] {
+      background-color: @color-special-dark;
+      cursor: not-allowed;
+    }
+  }
+
+  .filter__button-light {
+    :active {
+      color: @color-light;
+      background-color: @alt-colors-dark;
+    }
+
+    &[disabled] {
+      color: @color-light;
+      background-color: @alt-colors-light;
+      cursor: not-allowed;
     }
   }
 }

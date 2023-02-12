@@ -14,15 +14,10 @@
 
 .meta__icon {
   fill: @color-special-dark;
+}
 
-  &:hover,
-  &:focus {
-    fill: @color-base-contrast;
-  }
-
-  &:active {
-    fill: @color-base-contrast;
-  }
+.meta__link:active .meta__icon {
+  fill: @color-base-contrast;
 }
 
 .meta__link:active .meta__text {
@@ -41,6 +36,12 @@
     margin-bottom: 40px;
     margin-top: 24px;
   }
+}
+
+@media (min-width: @desktop-width) {
+  .meta {
+    margin-top: 15px;
+  }
 
   .meta__link:hover .meta__text,
   .meta__link:focus .meta__text {
@@ -52,10 +53,9 @@
     outline: none;
     color: @color-base-contrast;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .meta {
-    margin-top: 15px;
+  .meta__link:hover .meta__icon,
+  .meta__link:focus .meta__icon {
+    fill: @color-base-contrast;
   }
 }

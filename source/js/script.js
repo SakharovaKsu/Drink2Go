@@ -41,20 +41,31 @@ function onContentLoaded() {
   );
 
   marker.addTo(map);
-
-  // Slider
-  const swiper = new Swiper(".mySwiper", {
-    spaceBetween: 30,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-    el: ".swiper-pagination",
-  },
-    mousewheel: true,
-    keyboard: true,
-  });
 }
 
 window.addEventListener('DOMContentLoaded', onContentLoaded);
+
+const swiper = new Swiper('.mySwiper', {
+  observer: true,
+  observerParents: true,
+  
+  // Optional parameters
+  direction: 'vertical',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  mousewheel: true,
+  keyboard: true,
+});
+
+swiper.update();

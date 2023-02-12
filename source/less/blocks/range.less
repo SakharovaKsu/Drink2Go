@@ -175,6 +175,32 @@
     &:focus-visible::before {
       background: rgba(120, 89, 207, 0.25);
     }
+
+    &:active {
+      border-color: @alt-colors-dark;
+    }
+  
+    &:active::before {
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 16px;
+      top: 2px;
+      left: 2px;
+      background-color: @alt-colors-dark;
+      border-radius: 50%;
+    }
+
+    &:disabled,
+    &[disabled] {
+      background: @bk-colors-lightest;
+      border-color: @color-special-dark;
+      cursor: not-allowed;
+    }
+
+    &:disabled::before {
+      background: @bk-colors-lightest;
+    }
   }
 
   .range__toggle--max {

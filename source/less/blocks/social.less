@@ -75,4 +75,19 @@
   .social__link:focus-visible .social__icon {
     fill: @color-base-contrast;
   }
+
+  .social__link:active::before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: -9px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(120, 89, 207, 0.25);
+    border-radius: 4px;
+  }
+  
+  .social__link:active .social__icon {
+    fill: @color-base-contrast;
+  }
 }

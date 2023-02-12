@@ -5,7 +5,8 @@
     <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <!-- <link rel="stylesheet" href="./js/swiper/swiper-bundle.min.css"> -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font">
     <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" as="font">
@@ -101,7 +102,7 @@
               </li>
 
             <!-- Слайдер 2 -->
-              <li class="slider__item visually-hidden swiper-slide">
+              <li class="slider__item swiper-slide">
                 <picture>
                   <source type="image/webp" media="(min-width: 1200px)" srcset="./img/slide/desktop-slider-product-2.webp, ./img/slider/desktop-slider-product-2@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="./img/slide/tablet-slider-product-2.webp, ./img/slider/tablet-slider-product-2@2x.webp 2x">
@@ -123,7 +124,7 @@
               </li>
 
             <!-- Слайдер 3 -->
-              <li class="slider__item visually-hidden swiper-slide">
+              <li class="slider__item swiper-slide">
                 <picture>
                   <source type="image/webp" media="(min-width: 1200px)" srcset="./img/slide/desktop-slider-product-3.webp, ./img/slider/desktop-slider-product-3@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="./img/slide/tablet-slider-product-3.webp, ./img/slider/tablet-slider-product-3@2x.webp 2x">
@@ -144,9 +145,6 @@
                 </div>
               </li>
           </ol>
-          <button class="slider__next-button swiper-button-next" type="button">
-            <span class="visually-hidden">Стрелка вперед</span>
-          </button>
           <div class="slider__dot swiper-pagination">
             <button class="slider__carousel slider__carousel--active" type="button">
               <span class="visually-hidden">Слайдер</span>
@@ -158,6 +156,9 @@
               <span class="visually-hidden">Слайдер</span>
             </button>
           </div>
+          <button class="slider__next-button swiper-button-next" type="button">
+            <span class="visually-hidden">Стрелка вперед</span>
+          </button>
         </div>
       </div>
 
@@ -543,7 +544,7 @@
         </div>
       </footer>
     </main>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <script src="./js/script.js"></script>
   </body>
