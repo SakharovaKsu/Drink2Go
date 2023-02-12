@@ -1,7 +1,8 @@
 .pagination {
   display: flex;
-  justify-content: space-between;
+  gap: 20px;
   align-items: center;
+  padding-top: 22px;
 }
 
 .pagination__text {
@@ -57,9 +58,10 @@
 
 .pagination__list {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 .pagination__item {
@@ -104,6 +106,7 @@
 .pagination__link {
   text-decoration: none;
   color: @color-base-contrast;
+  font-size: 16px;
 
   &:active {
     position: relative;
