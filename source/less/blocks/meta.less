@@ -1,10 +1,10 @@
-.logo-html {
+.meta {
   width: calc(100% - 40px);
   margin: 27px 20px 30px 20px;
   background-size: 100%;
 }
 
-.logo-html__link {
+.meta__link {
   text-decoration: none;
   color: @color-special-dark;
   display: flex;
@@ -12,7 +12,7 @@
   gap: 4px;
 }
 
-.logo-html__icon {
+.meta__icon {
   fill: @color-special-dark;
 
   &:hover,
@@ -25,11 +25,11 @@
   }
 }
 
-.logo-html__link:active .logo-html__text {
+.meta__link:active .meta__text {
   color: @alt-colors-dark;
 }
 
-.logo-html__text {
+.meta__text {
   color: @color-special-dark;
   margin: 0;
   font-size: 12px;
@@ -37,19 +37,25 @@
 }
 
 @media (min-width: @tablet-width) {
-  .logo-html {
+  .meta {
     margin-bottom: 40px;
     margin-top: 24px;
   }
 
-  .logo-html__link:hover .logo-html__text,
-  .logo-html__link:focus .logo-html__text {
+  .meta__link:hover .meta__text,
+  .meta__link:focus .meta__text {
     color: @color-base-contrast;
   }
 
-  .logo-html__link:focus-visible .logo-html__text,
-  .logo-html__link:focus .logo-html__text {
+  .meta__link:focus-visible .meta__text,
+  .meta__link:focus .meta__text {
     outline: none;
     color: @color-base-contrast;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .meta {
+    margin-top: 15px;
   }
 }

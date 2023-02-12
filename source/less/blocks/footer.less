@@ -30,7 +30,7 @@
 @media (min-width: @desktop-width) {
   .footer {
     display: grid;
-    margin-top: 40px;
+    margin: 40px;
     grid-template-columns: 1fr 3fr;
     grid-template-areas: "nav social"
       "logo logo";
@@ -39,8 +39,10 @@
   .footer__social {
     align-items: flex-start;
     flex-direction: column;
-    gap: 10px;
+    gap: 0;
     grid-area: nav;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .footer__navigation {
@@ -56,6 +58,6 @@
     font-size: 14px;
     line-height: 20px;
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 58px;
   }
 }
