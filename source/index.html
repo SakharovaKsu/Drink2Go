@@ -5,6 +5,9 @@
     <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="">
+    <!-- <link rel="stylesheet" href="./js/libs/slick/slick.css">
+    <link rel="stylesheet" href="./js/libs/slick/slick-theme.css"> -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font">
     <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" as="font">
@@ -71,93 +74,91 @@
 
       <!-- Слайдеры -->
       <div class="slider">
-        <div class="">
-          <button class="slider__prev-button" type="button">
-            <span class="visually-hidden">Стрелка назад</span>
+        <button class="slider__prev-button" type="button">
+          <span class="visually-hidden">Стрелка назад</span>
+        </button>
+        <ol class="slider__list">
+
+          <!-- Слайдер 1 -->
+          <li class="slider__item">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="./img/slide/desktop-slider-product-1.webp, ./img/slider/desktop-slider-product-1@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/slide/tablet-slider-product-1.webp, ./img/slider/tablet-slider-product-1@2x.webp 2x">
+              <source type="image/webp" srcset="./img/slider/slider-product-1.webp, ./img/slider/slider-product-1@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="./img/slider/desktop-slider-product-1.png 1x ./img/slider/desktop-slider-product-1@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="./img/slider/tablet-slider-product-1.png 1x ./img/slider/tablet-slider-product-1@2x.png 2x">
+              <img class="slider__picture" src="./img/slider/slider-product-1.png" srcset="./img/slider/slider-product-1@2x.png 2x" width="280" height="280" alt="Светлая банка кофе с белыми брызгами на заднем фоне.">
+            </picture>
+            <div class="slider__wrapper">
+              <span class="slider__slogan slogan">Новинка!</span>
+              <h2 class="slider__title">Декаф Флэт Уайт</h2>
+              <p class="slider__text about-text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+              <div class="slider__container">
+                <span class="slider__desc"><s>295₽</s></span>
+                <span class="slider__text-desc">225₽</span>
+                <a class="slider__link button" href="#">Заказать</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Слайдер 2 -->
+          <li class="slider__item">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="./img/slide/desktop-slider-product-2.webp, ./img/slider/desktop-slider-product-2@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/slide/tablet-slider-product-2.webp, ./img/slider/tablet-slider-product-2@2x.webp 2x">
+              <source type="image/webp" srcset="./img/slider/slider-product-2.webp, ./img/slider/slider-product-2@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="./img/slider/desktop-slider-product-2.png 1x ./img/slider/desktop-slider-product-2@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="./img/slider/tablet-slider-product-2.png 1x ./img/slider/tablet-slider-product-2@2x.png 2x">
+              <img class="slider__picture" src="./img/slider/slider-product-2.png" srcset="./img/slider/slider-product-2@2x.png 2x" width="280" height="280" alt="Феолетовая банка кофе с веточками лаванды на заднем фоне.">
+            </picture>
+            <div class="slider__wrapper">
+              <span class="slider__slogan slogan">Новинка!</span>
+              <h2 class="slider__title">Лавандовый Латте</h2>
+              <p class="slider__text about-text">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+              <div class="slider__container">
+                <span class="slider__desc"><s>285₽</s></span>
+                <span class="slider__text-desc">265₽</span>
+                <a class="slider__link button" href="#">Заказать</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Слайдер 3 -->
+          <li class="slider__item">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="./img/slide/desktop-slider-product-3.webp, ./img/slider/desktop-slider-product-3@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/slide/tablet-slider-product-3.webp, ./img/slider/tablet-slider-product-3@2x.webp 2x">
+              <source type="image/webp" srcset="./img/slider/slider-product-3.webp, ./img/slider/slider-product-3@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="./img/slider/desktop-slider-product-3.png 1x ./img/slider/desktop-slider-product-3@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="./img/slider/tablet-slider-product-3.png 1x ./img/slider/tablet-slider-product-3@2x.png 2x">
+              <img class="slider__picture" src="./img/slider/slider-product-3.png" srcset="./img/slider/slider-product-3@2x.png 2x" width="280" height="280" alt="Черная банка кофе с зернами кофе на заднем фоне.">
+            </picture>
+            <div class="slider__wrapper">
+              <span class="slider__slogan slogan">Новинка!</span>
+              <h2 class="slider__title">Тройной Эспрессо</h2>
+              <p class="slider__text about-text">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+              <div class="slider__container">
+                <span class="slider__desc"><s>395₽</s></span>
+                <span class="slider__text-desc">375₽</span>
+                <a class="slider__link button" href="#">Заказать</a>
+              </div>
+            </div>
+          </li>
+        </ol>
+        <div class="slider__dot">
+          <button class="slider__carousel slider__carousel--active" type="button">
+            <span class="visually-hidden">Слайдер</span>
           </button>
-          <ol class="slider__list">
-
-            <!-- Слайдер 1 -->
-              <li class="slider__item">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1200px)" srcset="./img/slide/desktop-slider-product-1.webp, ./img/slider/desktop-slider-product-1@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/slide/tablet-slider-product-1.webp, ./img/slider/tablet-slider-product-1@2x.webp 2x">
-                  <source type="image/webp" srcset="./img/slider/slider-product-1.webp, ./img/slider/slider-product-1@2x.webp 2x">
-                  <source media="(min-width: 1200px)" srcset="./img/slider/desktop-slider-product-1.png 1x ./img/slider/desktop-slider-product-1@2x.png 2x">
-                  <source media="(min-width: 768px)" srcset="./img/slider/tablet-slider-product-1.png 1x ./img/slider/tablet-slider-product-1@2x.png 2x">
-                  <img class="slider__picture" src="./img/slider/slider-product-1.png" srcset="./img/slider/slider-product-1@2x.png 2x" width="280" height="280" alt="Светлая банка кофе с белыми брызгами на заднем фоне.">
-                </picture>
-                <div class="slider__wrapper">
-                  <span class="slider__slogan slogan">Новинка!</span>
-                  <h2 class="slider__title">Декаф Флэт Уайт</h2>
-                  <p class="slider__text about-text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
-                  <div class="slider__container">
-                    <span class="slider__desc"><s>295₽</s></span>
-                    <span class="slider__text-desc">225₽</span>
-                    <a class="slider__link button" href="#">Заказать</a>
-                  </div>
-                </div>
-              </li>
-
-            <!-- Слайдер 2 -->
-              <li class="slider__item">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1200px)" srcset="./img/slide/desktop-slider-product-2.webp, ./img/slider/desktop-slider-product-2@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/slide/tablet-slider-product-2.webp, ./img/slider/tablet-slider-product-2@2x.webp 2x">
-                  <source type="image/webp" srcset="./img/slider/slider-product-2.webp, ./img/slider/slider-product-2@2x.webp 2x">
-                  <source media="(min-width: 1200px)" srcset="./img/slider/desktop-slider-product-2.png 1x ./img/slider/desktop-slider-product-2@2x.png 2x">
-                  <source media="(min-width: 768px)" srcset="./img/slider/tablet-slider-product-2.png 1x ./img/slider/tablet-slider-product-2@2x.png 2x">
-                  <img class="slider__picture" src="./img/slider/slider-product-2.png" srcset="./img/slider/slider-product-2@2x.png 2x" width="280" height="280" alt="Феолетовая банка кофе с веточками лаванды на заднем фоне.">
-                </picture>
-                <div class="slider__wrapper">
-                  <span class="slider__slogan slogan">Новинка!</span>
-                  <h2 class="slider__title">Лавандовый Латте</h2>
-                  <p class="slider__text about-text">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
-                  <div class="slider__container">
-                    <span class="slider__desc"><s>285₽</s></span>
-                    <span class="slider__text-desc">265₽</span>
-                    <a class="slider__link button" href="#">Заказать</a>
-                  </div>
-                </div>
-              </li>
-
-            <!-- Слайдер 3 -->
-              <li class="slider__item">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1200px)" srcset="./img/slide/desktop-slider-product-3.webp, ./img/slider/desktop-slider-product-3@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/slide/tablet-slider-product-3.webp, ./img/slider/tablet-slider-product-3@2x.webp 2x">
-                  <source type="image/webp" srcset="./img/slider/slider-product-3.webp, ./img/slider/slider-product-3@2x.webp 2x">
-                  <source media="(min-width: 1200px)" srcset="./img/slider/desktop-slider-product-3.png 1x ./img/slider/desktop-slider-product-3@2x.png 2x">
-                  <source media="(min-width: 768px)" srcset="./img/slider/tablet-slider-product-3.png 1x ./img/slider/tablet-slider-product-3@2x.png 2x">
-                  <img class="slider__picture" src="./img/slider/slider-product-3.png" srcset="./img/slider/slider-product-3@2x.png 2x" width="280" height="280" alt="Черная банка кофе с зернами кофе на заднем фоне.">
-                </picture>
-                <div class="slider__wrapper">
-                  <span class="slider__slogan slogan">Новинка!</span>
-                  <h2 class="slider__title">Тройной Эспрессо</h2>
-                  <p class="slider__text about-text">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
-                  <div class="slider__container">
-                    <span class="slider__desc"><s>395₽</s></span>
-                    <span class="slider__text-desc">375₽</span>
-                    <a class="slider__link button" href="#">Заказать</a>
-                  </div>
-                </div>
-              </li>
-          </ol>
-          <div class="slider__dot">
-            <button class="slider__carousel slider__carousel--active" type="button">
-              <span class="visually-hidden">Слайдер</span>
-            </button>
-            <button class="slider__carousel" type="button">
-              <span class="visually-hidden">Слайдер</span>
-            </button>
-            <button class="slider__carousel" type="button">
-              <span class="visually-hidden">Слайдер</span>
-            </button>
-          </div>
-          <button class="slider__next-button" type="button">
-            <span class="visually-hidden">Стрелка вперед</span>
+          <button class="slider__carousel" type="button">
+            <span class="visually-hidden">Слайдер</span>
+          </button>
+          <button class="slider__carousel" type="button">
+            <span class="visually-hidden">Слайдер</span>
           </button>
         </div>
+        <button class="slider__next-button" type="button">
+          <span class="visually-hidden">Стрелка вперед</span>
+        </button>
       </div>
 
       <!-- Преимущества -->
@@ -542,8 +543,8 @@
         </div>
       </footer>
     </main>
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- <script src="./js/libs/slick/slick.min.js"></script> -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <script src="./js/script.js"></script>
   </body>
