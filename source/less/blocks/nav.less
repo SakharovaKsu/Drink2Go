@@ -48,6 +48,21 @@
   fill: @color-dark-text;
 }
 
+.nav__link:hover .nav__desc,
+.nav__link:focus .nav__desc {
+  color: @color-base-contrast;
+}
+
+.nav__link:hover .nav__icon,
+.nav__link:focus .nav__icon {
+  fill: @color-base-contrast;
+}
+
+.nav__link:focus-visible {
+  outline: none;
+  fill: @color-base-contrast;
+}
+
 .nav__link:active {
   background-color: @color-basic-light;
 }
@@ -202,20 +217,6 @@
   .nav__link {
     padding: 32px 22px;
     text-decoration: none;
-  }
-
-  .nav__link:hover .nav__desc,
-  .nav__link:focus .nav__desc {
-    color: @color-base-contrast;
-  }
-
-  .nav__link:hover .nav__icon,
-  .nav__link:focus .nav__icon {
-    fill: @color-base-contrast;
-  }
-
-  .nav__link:focus-visible {
-    outline: none;
   }
 
   .nav__desc {

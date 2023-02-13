@@ -10,10 +10,55 @@
   &:last-child {
     margin-top: 24px;
   }
+}
+
+
+.filter__button {
+  &:hover,
+  &:focus {
+    color: @color-light;
+    background-color: @alt-colors;
+  }
+
+  &:focus-visible {
+    outline: none;
+    color: @color-light;
+    background-color: @alt-colors;
+  }
 
   &:active {
     color: @color-light;
     background-color: @alt-colors-dark;
+  }
+
+  &[disabled] {
+    background-color: @color-special-dark;
+    cursor: not-allowed;
+  }
+}
+
+.filter__button-light {
+  &:hover,
+  &:focus {
+    color: @color-light;
+    background-color: @alt-colors;
+  }
+
+  &:focus-visible {
+    outline: none;
+    color: @color-light;
+    background-color: @alt-colors;
+  }
+
+  &:active {
+    color: @color-light;
+    background-color: @alt-colors-dark;
+  }
+
+  &[disabled] {
+    color: @color-light;
+    background-color: @alt-colors-light;
+    cursor: not-allowed;
   }
 }
 
@@ -65,54 +110,5 @@
     margin-top: 0;
     margin-right: 0;
     gap: 18px;
-  }
-
-  .filter__button {
-    &:hover,
-    &:focus {
-      color: @color-light;
-      background-color: @alt-colors;
-    }
-
-    &:focus-visible {
-      outline: none;
-      color: @color-light;
-      background-color: @alt-colors;
-    }
-
-    &:active {
-      color: @color-light;
-      background-color: @alt-colors-dark;
-    }
-
-    &[disabled] {
-      background-color: @color-special-dark;
-      cursor: not-allowed;
-    }
-  }
-
-  .filter__button-light {
-    &:hover,
-    &:focus {
-      color: @color-light;
-      background-color: @alt-colors;
-    }
-
-    &:focus-visible {
-      outline: none;
-      color: @color-light;
-      background-color: @alt-colors;
-    }
-
-    &:active {
-      color: @color-light;
-      background-color: @alt-colors-dark;
-    }
-
-    &[disabled] {
-      color: @color-light;
-      background-color: @alt-colors-light;
-      cursor: not-allowed;
-    }
   }
 }

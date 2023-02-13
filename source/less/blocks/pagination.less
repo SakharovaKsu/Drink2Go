@@ -21,6 +21,11 @@
   background-position: center center;
   cursor: pointer;
 
+  &:hover .pagination__text,
+  &:focus .pagination__text {
+  color: @color-light;
+}
+
   &:active .pagination__text {
     color: @color-light;
     background-color: @alt-colors-dark;
@@ -84,6 +89,30 @@
 
 .pagination__item--active {
   background-color: transparent;
+}
+
+.pagination__button,
+.pagination__item {
+  &:hover,
+  &:focus {
+    background-color: @alt-colors;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: @alt-colors;
+  }
+}
+
+.pagination__item:hover .pagination__link,
+.pagination__item:focus .pagination__link {
+  color: @color-light;
+  background-color: @alt-colors;
+}
+
+.pagination__item:focus-visible .pagination__link {
+  color: @color-light;
+  background-color: @alt-colors;
 }
 
 .pagination__item .pagination__link:active::before {
@@ -154,34 +183,6 @@
     padding-top: 0;
   }
   
-  .pagination__button,
-  .pagination__item {
-    &:hover,
-    &:focus {
-      background-color: @alt-colors;
-    }
-
-    &:focus-visible {
-      outline: none;
-      background-color: @alt-colors;
-    }
-  }
-
-  .pagination__button:hover .pagination__text,
-  .pagination__button:focus .pagination__text {
-    color: @color-light;
-  }
-
-  .pagination__item:hover .pagination__link,
-  .pagination__item:focus .pagination__link {
-    color: @color-light;
-    background-color: @alt-colors;
-  }
-
-  .pagination__item:focus-visible .pagination__link {
-    color: @color-light;
-    background-color: @alt-colors;
-  }
 
   .pagination__item:active .pagination__link {
     color: @color-light;

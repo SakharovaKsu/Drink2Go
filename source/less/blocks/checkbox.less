@@ -64,6 +64,48 @@
   left: 17px;
 }
 
+.checkbox__input[type="checkbox"]:checked:disabled + .checkbox__mark {
+  border-color: @alt-colors-light;
+  background-color: @alt-colors-light;
+}
+
+.checkbox__input:not(:disabled):not(:checked):hover + .checkbox__mark,
+.checkbox__input:not(:checked):focus + .checkbox__mark {
+  border-color: @alt-colors;
+  background-color: rgba(120, 89, 207, 0.25);
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: @color-light;
+    border-radius: 50%;
+  }
+}
+
+.checkbox__input:not(:disabled):not(:checked):focus-visible + .checkbox__mark {
+  border-color: @alt-colors;
+  background-color: rgba(120, 89, 207, 0.25);
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: @color-light;
+    border-radius: 50%;
+  }
+}
+
+.checkbox__input[type="checkbox"]:checked:disabled + .checkbox__mark::before {
+  background-color: @color-special-dark;
+}
+
 .checkbox__input:disabled + .checkbox__mark {
   background-color: @alt-colors-light;
   border-color: @alt-colors-light;
@@ -77,15 +119,6 @@
   color: @color-special-dark;
 }
 
-.checkbox__input[type="checkbox"]:checked:disabled + .checkbox__mark {
-  border-color: @alt-colors-light;
-  background-color: @alt-colors-light;
-}
-
-.checkbox__input[type="checkbox"]:checked:disabled + .checkbox__mark::before {
-  background-color: @color-special-dark;
-}
-
 @media (min-width: @tablet-width) {
   .checkbox {
     margin-left: 19px;
@@ -95,22 +128,5 @@
 @media (min-width: @desktop-width) {
   .checkbox {
     margin-left: 0;
-  }
-
-  .checkbox__input:not(:disabled):not(:checked):hover + .checkbox__mark,
-  .checkbox__input:not(:checked):focus + .checkbox__mark {
-    border-color: @alt-colors;
-    background-color: rgba(120, 89, 207, 0.25);
-
-    &::after {
-      position: absolute;
-      content: "";
-      top: 2px;
-      left: 2px;
-      width: 16px;
-      height: 16px;
-      background-color: @color-light;
-      border-radius: 50%;
-    }
   }
 }

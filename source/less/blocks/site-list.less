@@ -10,9 +10,20 @@
   border-bottom: 1px solid @color-basic-light;
   padding: 20px;
 
+  &:hover,
+  &:focus {
+    color: @color-base-contrast;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
   &:active {
+    color: @color-base-contrast;
     background-color: @color-basic-light;
   }
+
 }
 
 .site-list__link {
@@ -22,6 +33,19 @@
   color: @color-dark-text;
   margin: 0 auto;
   padding: 20px 0;
+
+  &:hover,
+  &:focus {
+    color: @color-base-contrast;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:active {
+    color: @color-base-contrast;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -66,20 +90,6 @@
 
   .site-list__item {
     padding: 31px 20px;
-
-    &:hover,
-    &:focus {
-      color: @color-base-contrast;
-    }
-
-    &:focus-visible {
-      outline: none;
-    }
-
-    &:active {
-      color: @color-base-contrast;
-      background-color: @color-basic-light;
-    }
   } 
 
   .site-list__item--ative::before {
@@ -88,18 +98,5 @@
 
   .site-list__link {
     padding: 30px 30px;
-
-    &:hover,
-    &:focus {
-      color: @color-base-contrast;
-    }
-
-    &:focus-visible {
-      outline: none;
-    }
-
-    &:active {
-      color: @color-base-contrast;
-    }
   }
 }

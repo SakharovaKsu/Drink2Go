@@ -41,6 +41,14 @@
   font-size: 12px;
   line-height: 16px;
   text-transform: uppercase;
+  &:hover,
+  &:focus {
+    color: @alt-colors;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
 
   &:active {
     color: @alt-colors-dark;
@@ -101,16 +109,5 @@
   .nav-footer {
     margin: 10px 0 0 8px;
     gap: 60px;
-  }
-
-  .nav-footer__link {
-    &:hover,
-    &:focus {
-      color: @alt-colors;
-    }
-
-    &:focus-visible {
-      outline: none;
-    }
   }
 }
