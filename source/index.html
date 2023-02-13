@@ -5,8 +5,6 @@
     <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <!-- <link rel="stylesheet" href="./js/swiper/swiper-bundle.min.css"> -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font">
     <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" as="font">
@@ -72,15 +70,15 @@
       <h1 class="visually-hidden">Интернет-магазин кофейных напитков</h1>
 
       <!-- Слайдеры -->
-      <div class="slider swiper">
-        <div class="swiper-container">
-          <button class="slider__prev-button swiper-button-prev" type="button">
+      <div class="slider">
+        <div class="">
+          <button class="slider__prev-button" type="button">
             <span class="visually-hidden">Стрелка назад</span>
           </button>
-          <ol class="slider__list swiper-wrapper">
+          <ol class="slider__list">
 
             <!-- Слайдер 1 -->
-              <li class="slider__item swiper-slide">
+              <li class="slider__item">
                 <picture>
                   <source type="image/webp" media="(min-width: 1200px)" srcset="./img/slide/desktop-slider-product-1.webp, ./img/slider/desktop-slider-product-1@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="./img/slide/tablet-slider-product-1.webp, ./img/slider/tablet-slider-product-1@2x.webp 2x">
@@ -102,7 +100,7 @@
               </li>
 
             <!-- Слайдер 2 -->
-              <li class="slider__item swiper-slide">
+              <li class="slider__item">
                 <picture>
                   <source type="image/webp" media="(min-width: 1200px)" srcset="./img/slide/desktop-slider-product-2.webp, ./img/slider/desktop-slider-product-2@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="./img/slide/tablet-slider-product-2.webp, ./img/slider/tablet-slider-product-2@2x.webp 2x">
@@ -124,7 +122,7 @@
               </li>
 
             <!-- Слайдер 3 -->
-              <li class="slider__item swiper-slide">
+              <li class="slider__item">
                 <picture>
                   <source type="image/webp" media="(min-width: 1200px)" srcset="./img/slide/desktop-slider-product-3.webp, ./img/slider/desktop-slider-product-3@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="./img/slide/tablet-slider-product-3.webp, ./img/slider/tablet-slider-product-3@2x.webp 2x">
@@ -145,7 +143,7 @@
                 </div>
               </li>
           </ol>
-          <div class="slider__dot swiper-pagination">
+          <div class="slider__dot">
             <button class="slider__carousel slider__carousel--active" type="button">
               <span class="visually-hidden">Слайдер</span>
             </button>
@@ -156,7 +154,7 @@
               <span class="visually-hidden">Слайдер</span>
             </button>
           </div>
-          <button class="slider__next-button swiper-button-next" type="button">
+          <button class="slider__next-button" type="button">
             <span class="visually-hidden">Стрелка вперед</span>
           </button>
         </div>
@@ -544,7 +542,8 @@
         </div>
       </footer>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <script src="./js/script.js"></script>
   </body>

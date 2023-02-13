@@ -167,16 +167,16 @@
   .slider__prev-button,
   .slider__next-button {
     padding: 0 30px;
+    width: 80px;
+    height: 77%;
   }
 
   .slider__prev-button::after {
     left: 50%;
-    top: 48%;
   }
 
   .slider__next-button::after {
     right: 50%;
-    top: 48%;
   }
 
   .slider__list {
@@ -222,12 +222,19 @@
     background: @bk-colors-light-warm;
   }
 
-  .slider__prev-button::before {
-    left: 20px;
+  .slider__prev-button,
+  .slider__next-button {
+    padding: 0 30px;
+    width: 80px;
+    height: 100%;
   }
 
-  .slider__next-button::before {
-    left: 20px;
+  .slider__prev-button::after {
+    left: 30%;
+  }
+
+  .slider__next-button::after {
+    right: 30%;
   }
 
   .slider__list {

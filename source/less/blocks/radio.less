@@ -84,8 +84,8 @@
     margin-bottom: 20px;
   }
 
-  .radio__input:not(:disabled):not(:checked):hover + .radio__mark,
-  .radio__input:not(:checked):focus + .radio__mark {
+  .radio__input:hover:not(:checked):not(:disabled) + .radio__mark,
+  .radio__input:focus:not(:checked) + .radio__mark {
     border-color: @color-base-contrast;
 
     &::before {
