@@ -5,9 +5,6 @@
     <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="">
-    <!-- <link rel="stylesheet" href="./js/libs/slick/slick.css">
-    <link rel="stylesheet" href="./js/libs/slick/slick-theme.css"> -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font">
     <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" as="font">
@@ -73,11 +70,11 @@
       <h1 class="visually-hidden">Интернет-магазин кофейных напитков</h1>
 
       <!-- Слайдеры -->
-      <div class="slider">
-        <button class="slider__prev-button" type="button">
+      <section class="slider">
+        <button class="slider__prev-button" id="slider__prev-button" type="button">
           <span class="visually-hidden">Стрелка назад</span>
         </button>
-        <ol class="slider__list">
+        <ol class="slider__list" id="slider__list">
 
           <!-- Слайдер 1 -->
           <li class="slider__item">
@@ -156,10 +153,10 @@
             <span class="visually-hidden">Слайдер</span>
           </button>
         </div>
-        <button class="slider__next-button" type="button">
+        <button class="slider__next-button" id="slider__next-button" type="button">
           <span class="visually-hidden">Стрелка вперед</span>
         </button>
-      </div>
+      </section>
 
       <!-- Преимущества -->
       <section class="benefits">
@@ -543,8 +540,6 @@
         </div>
       </footer>
     </main>
-    <!-- <script src="./js/libs/slick/slick.min.js"></script> -->
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <script src="./js/script.js"></script>
   </body>

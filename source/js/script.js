@@ -1,14 +1,3 @@
-// getComputedStyle polyfill
-window.getComputedStyle = function(e, t) {
-  return this.el = e, this.getPropertyValue = function(t) {
-    /** @type {RegExp} */
-    var n = /(\-([a-z]){1})/g;
-    return t == "float" && (t = "styleFloat"), n.test(t) && (t = t.replace(n, function() {
-      return arguments[2].toUpperCase();
-    })), e.currentStyle[t] ? e.currentStyle[t] : null;
-  }, this;
-};
-
 function onContentLoaded() {
   // Main
   let navMain = document.querySelector('.nav');
@@ -52,16 +41,6 @@ function onContentLoaded() {
   );
 
   marker.addTo(map);
-
-  $(document).ready(function(){
-    $('.slider').slick({
-      dots: true,
-      infinite: true,
-      speed: 500,
-      fade: true,
-      cssEase: 'linear'
-    });
-  });
 }
 
 window.addEventListener('DOMContentLoaded', onContentLoaded);
