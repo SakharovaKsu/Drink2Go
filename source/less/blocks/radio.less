@@ -30,7 +30,7 @@
 
 .radio__control {
   position: relative;
-  padding-left: 34px;
+  padding: 5px 0 5px 34px;
 }
 
 .radio__mark {
@@ -38,7 +38,7 @@
   width: 24px;
   height: 24px;
   left: 0;
-  top: -5px;
+  top: 4px;
   background: @color-light;
   border: 2px solid @color-special-dark;
   border-radius: 50%;
@@ -59,8 +59,9 @@
   border-radius: 50%;
 }
 
-.radio__input:hover:not(:checked):not(:disabled) + .radio__mark,
-.radio__input:focus:not(:checked) + .radio__mark {
+.radio__input:not(:disabled):hover + .radio__mark,
+.radio__input:not(:disabled):focus + .radio__mark,
+.radio__input:not(:disabled):focus-visible + .radio__mark {
   border-color: @color-base-contrast;
 
   &::before {
@@ -86,7 +87,7 @@
 }
 
 .radio__input:disabled + .radio__mark,
-.radio__input:disabled ~ .radio__label {
+.radio__input:disabled + .radio__label {
   border: @color-special-dark;
   color: @color-special-dark;
 }

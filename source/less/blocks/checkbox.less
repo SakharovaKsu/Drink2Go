@@ -28,7 +28,7 @@
 
 .checkbox__control {
   position: relative;
-  padding-left: 55px;
+  padding: 5px 0 5px 55px;
 }
 
 .checkbox__mark {
@@ -36,12 +36,12 @@
   width: 42px;
   height: 24px;
   left: 0;
-  top: -5px;
+  top: 2px;
   background: @color-special-dark;
   border: 2px solid @color-special-dark;
   border-radius: 15px;
 
-  &::before {
+  &::after {
     display: block;
     position: absolute;
     content: "";
@@ -59,7 +59,7 @@
   background-color: @color-base-contrast;
 }
 
-.checkbox__input[type="checkbox"]:checked + .checkbox__mark::before {
+.checkbox__input[type="checkbox"]:checked + .checkbox__mark::after {
   top: 0;
   left: 17px;
 }
@@ -69,8 +69,8 @@
   background-color: @alt-colors-light;
 }
 
-.checkbox__input:not(:disabled):not(:checked):hover + .checkbox__mark,
-.checkbox__input:not(:checked):focus + .checkbox__mark {
+.checkbox__input[type="checkbox"]:not(:disabled):hover + .checkbox__mark,
+.checkbox__input[type="checkbox"]:not(:checked):focus + .checkbox__mark {
   border-color: @alt-colors;
   background-color: rgba(120, 89, 207, 0.25);
 
@@ -86,7 +86,7 @@
   }
 }
 
-.checkbox__input:not(:disabled):not(:checked):focus-visible + .checkbox__mark {
+.checkbox__input:not(:disabled):focus-visible + .checkbox__mark {
   border-color: @alt-colors;
   background-color: rgba(120, 89, 207, 0.25);
 
@@ -102,7 +102,7 @@
   }
 }
 
-.checkbox__input[type="checkbox"]:checked:disabled + .checkbox__mark::before {
+.checkbox__input[type="checkbox"]:checked:disabled + .checkbox__mark::after{
   background-color: @color-special-dark;
 }
 
@@ -110,7 +110,7 @@
   background-color: @alt-colors-light;
   border-color: @alt-colors-light;
 
-  &::before {
+  &::after {
     background-color: @bk-colors-lightest;
   }
 }
