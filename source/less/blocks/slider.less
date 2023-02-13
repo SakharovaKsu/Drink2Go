@@ -2,6 +2,10 @@
   position: relative;
   width: 100%;
   background-color: @bk-colors-light-warm;
+
+  &:not(.slider--no-js) .slider__item:not(.slider__item--active) {
+    display: none;
+  }
 }
 
 .slider--no-js {
@@ -17,7 +21,7 @@
   position: absolute;
   height: 100%;
   width: 20px;
-  top: 20px;
+  top: 0;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -100,6 +104,7 @@
 
 .slider__list {
   display: flex;
+  justify-content: center;
   width: calc(100% - 40px);
   background-size: 100%;
   padding: 0;

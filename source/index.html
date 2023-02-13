@@ -77,7 +77,7 @@
         <ol class="slider__list">
 
           <!-- Слайдер 1 -->
-          <li class="slider__item">
+          <li class="slider__item slider__item--active">
             <picture>
               <source type="image/webp" media="(min-width: 1200px)" srcset="./img/slide/desktop-slider-product-1.webp, ./img/slider/desktop-slider-product-1@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="./img/slide/tablet-slider-product-1.webp, ./img/slider/tablet-slider-product-1@2x.webp 2x">
@@ -146,13 +146,13 @@
           <span class="visually-hidden">Стрелка вперед</span>
         </button>
         <div class="slider__dot">
-          <button class="slider__carousel slider__carousel--active" type="button">
+          <button class="slider__carousel slider__carousel--active" type="button" data-show="0">
             <span class="visually-hidden">Слайдер</span>
           </button>
-          <button class="slider__carousel" type="button">
+          <button class="slider__carousel" type="button" data-show="1">
             <span class="visually-hidden">Слайдер</span>
           </button>
-          <button class="slider__carousel" type="button">
+          <button class="slider__carousel" type="button" data-show="2">
             <span class="visually-hidden">Слайдер</span>
           </button>
         </div>

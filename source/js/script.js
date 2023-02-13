@@ -42,13 +42,55 @@ function onContentLoaded() {
 
   marker.addTo(map);
 
+  // Slide
   const buttonPrev = document.querySelector('.slider__prev-button');
   const buttonNext = document.querySelector('.slider__next-button');
-  const slides = document.querySelectorAll('.slider__item');
+  const slider = document.querySelector('.slider');
+  const slidesItem = document.querySelectorAll('.slider__item');
+  const dot = document.querySelector('.slider__dot');
   const sliderCarousel = document.querySelectorAll('.slider__carousel');
 
-  const current = 0;
+  let current = 0;
   
+  slider.classList.remove('slider--no-js');
+
+  function showSlide() {
+    const sliderActive = document.querySelector('.slider__item--active');
+    sliderActive.classList.remove('slider__item--active');
+    slidesItem[current].classList.add('slider__item--active');
+
+    const carouselActive = document.querySelector('.slider__carousel--active');
+    carouselActive.classList.remove('slider__carousel--active');
+    sliderCarousel[current].classList.add('slider__carousel--active');
+  }
+
+  buttonNext.addEventListener('click', function() {
+    current ++;
+
+    if(current > slidesItem.length - 1) {
+      current = 0;
+    };
+
+    showSlide();
+  })
+
+  buttonPrev.addEventListener('click', function() {
+    current --;
+
+    if(current < 0) {
+      current = slidesItem.length - 1;
+    };
+
+    showSlide();
+  })
+
+  dot.addEventListener('click', function(e) {
+    if(e.target.dataset.show) {
+      current = +e.target.dataset.show;
+      
+      showSlide();
+    }
+  })
 }
 
 window.addEventListener('DOMContentLoaded', onContentLoaded);
