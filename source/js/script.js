@@ -41,6 +41,14 @@ function onContentLoaded() {
   );
 
   marker.addTo(map);
+
+  const buttonPrev = document.querySelector('.slider__prev-button');
+  const buttonNext = document.querySelector('.slider__next-button');
+  const slides = document.querySelectorAll('.slider__item');
+  const sliderCarousel = document.querySelectorAll('.slider__carousel');
+
+  const current = 0;
+  
 }
 
 window.addEventListener('DOMContentLoaded', onContentLoaded);

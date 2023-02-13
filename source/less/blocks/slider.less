@@ -4,6 +4,14 @@
   background-color: @bk-colors-light-warm;
 }
 
+.slider--no-js {
+  & .slider__prev-button,
+  & .slider__next-button,
+  & .slider__dot {
+    display: none;
+  }
+}
+
 .slider__prev-button,
 .slider__next-button {
   position: absolute;
@@ -91,6 +99,7 @@
 }
 
 .slider__list {
+  display: flex;
   width: calc(100% - 40px);
   background-size: 100%;
   padding: 0;
