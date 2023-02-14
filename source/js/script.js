@@ -51,7 +51,6 @@ function onContentLoaded() {
   const sliderCarousel = document.querySelectorAll('.slider__carousel');
 
   let current = 0;
-  
   slider.classList.remove('slider--no-js');
 
   function showSlide() {
@@ -87,7 +86,6 @@ function onContentLoaded() {
   dot.addEventListener('click', function(e) {
     if(e.target.dataset.show) {
       current = +e.target.dataset.show;
-      
       showSlide();
     }
   })
