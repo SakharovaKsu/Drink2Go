@@ -35,7 +35,7 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    top: 50%;
+    top: 48%;
     left: 0;
     background-image: url("../../img/arrow.svg");
   }
@@ -72,7 +72,7 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    top: 50%;
+    top: 48%;
     right: 0;
     background-image: url("../../img/arrow.svg");
     transform: scale(-1, -1);
@@ -105,10 +105,11 @@
 .slider__list {
   display: flex;
   justify-content: center;
+  gap: 33px;
   width: calc(100% - 40px);
   background-size: 100%;
   padding: 0;
-  padding-top: 20px;
+  padding-top: 15px;
   padding-bottom: 60px;
   list-style-type: none;
   margin: 0 auto;
@@ -135,6 +136,7 @@
   font-weight: 700;
   font-size: 36px;
   line-height: 48px;
+  letter-spacing: 0.02em;
   text-align: center;
   margin-bottom: 10px;
   margin-top: 4px;
@@ -142,7 +144,9 @@
 
 .slider__text {
   text-align: center;
+  margin: 0 auto;
   margin-bottom: 21px;
+  max-width: 280px;
 }
 
 .slider__container {
@@ -186,11 +190,11 @@
   }
 
   .slider__prev-button::after {
-    left: 50%;
+    left: 38%;
   }
 
   .slider__next-button::after {
-    right: 50%;
+    right: 38%;
   }
 
   .slider__list {
@@ -244,11 +248,11 @@
   }
 
   .slider__prev-button::after {
-    left: 30%;
+    left: 37%;
   }
 
   .slider__next-button::after {
-    right: 30%;
+    right: 37%;
   }
 
   .slider__list {
@@ -283,9 +287,9 @@
 
   .slider__dot {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     position: absolute;
-    right: 42%;
+    right: 43%;
     bottom: 70px;
   }
 

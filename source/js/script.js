@@ -13,8 +13,8 @@ function onContentLoaded() {
   // Map
   const map = L.map('map')
     .setView({
-      lat: 59.968137,
-      lng: 30.316272,
+      lat: 59.968321,
+      lng: 30.317462,
     }, 17);
 
   L.tileLayer(
@@ -27,13 +27,13 @@ function onContentLoaded() {
   const mainPinIcon = L.icon({
     iconUrl: '../img/map-pin.svg',
     iconSize: [38, 50],
-    iconAnchor: [19, 50],
+    iconAnchor: [16, 50],
   });
 
   const marker = L.marker(
     {
-      lat: 59.968137,
-      lng: 30.316272,
+      lat: 59.968321,
+      lng: 30.317462,
     },
     {
       icon: mainPinIcon,

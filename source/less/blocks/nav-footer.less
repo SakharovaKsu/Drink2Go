@@ -74,6 +74,19 @@
   background-image: url("../../img/phone.svg");
   background-repeat: no-repeat;
   background-position: left center;
+
+  &:hover,
+  &:focus {
+    color: @alt-colors;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:active {
+    color: @alt-colors-dark;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -87,7 +100,7 @@
   }
 
   .nav-footer__title {
-    margin-bottom: 16px;
+    margin-bottom: 17px;
   }
 
   .nav-footer__wrapper {

@@ -27,13 +27,29 @@
   background-repeat: no-repeat;
   background-position: 135px center;
   padding: 4px 30px 4px 10px;
+
+  &:hover,
+  &:focus {
+    background-color: @color-basic-light;
+    border-radius: 4px;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: @color-basic-light;
+    border-radius: 4px;
+  }
+
+  &:active {
+    background-image: url("../../img/arrow-select-active.svg");
+  }
 }
 
 @media (min-width: @tablet-width) {
   .sorting {
     justify-content: flex-end;
     gap: 10px;
-    margin-bottom: 27px;
+    margin-bottom: 25px;
     padding-top: 35px;
   }
 
@@ -46,21 +62,5 @@
 @media (min-width: @desktop-width) {
   .sorting {
     padding-top: 0;
-  }
-
-  .sorting__select {
-    &:hover,
-    &:focus {
-      background-color: @color-basic-light;
-      border-radius: 4px;
-    }
-
-    &:focus-visible {
-      outline: none;
-    }
-
-    &:active {
-      background-image: url("../../img/arrow-select-active.svg");
-    }
   }
 }

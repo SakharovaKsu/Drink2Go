@@ -169,7 +169,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 20px;
+    margin: 0;
   }
 
   .nav__logo {
@@ -190,13 +190,14 @@
   }
 
   .nav__list {
+    gap: 0;
     margin: 0;
-    margin-right: 21px;
+    margin-right: 10px;
   }
 
   .nav__link {
     display: flex;
-    padding: 30px 30px;
+    padding: 30px 25px;
   }
 
   .nav__site {
@@ -209,8 +210,17 @@
 }
 
 @media (min-width: @desktop-width) {
+  .nav {
+    margin: 0 20px;
+  }
+
   .nav__logo {
     margin-top: 0;
+  }
+
+  .nav__list {
+    gap: 20px;
+    margin: 0 19px 0 0;
   }
 
   .nav__link {
