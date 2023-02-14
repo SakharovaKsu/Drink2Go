@@ -21,10 +21,20 @@
   background-position: center center;
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    background-color: @alt-colors;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: @alt-colors;
+  }
+
   &:hover .pagination__text,
   &:focus .pagination__text {
-  color: @color-light;
-}
+    color: @color-light;
+  }
 
   &:active .pagination__text {
     color: @color-light;
@@ -71,18 +81,6 @@
 
 .pagination__item--active {
   background-color: transparent;
-}
-
-.pagination__button {
-  &:hover,
-  &:focus {
-    background-color: @alt-colors;
-  }
-
-  &:focus-visible {
-    outline: none;
-    background-color: @alt-colors;
-  }
 }
 
 .pagination__link {
@@ -157,7 +155,7 @@
   }
 
   .paginatio__link--back {
-    border-radius: 4px 0 0 4px;;
+    border-radius: 4px 0 0 4px;
   }
 }
 
