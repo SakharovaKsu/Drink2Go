@@ -23,10 +23,13 @@
 }
 
 .product__title {
+  display: block;
   margin: 24px 0 4px 0;
   font-weight: 700;
   font-size: 18px;
   line-height: 32px;
+  text-decoration: none;
+  color: @color-dark-text;
 }
 
 .product__text {
@@ -53,9 +56,10 @@
   border: none;
   border-radius: 5px;
   color: @color-light;
+  font-family: @text-font;
   font-size: 14px;
   line-height: 20px;
-  padding: 8px 20px 8px 57px;
+  padding: 8px 20px 8px 47px;
   background-image: url("../../img/basket-button.svg");
   background-repeat: no-repeat;
   background-position: 20px center;
@@ -84,7 +88,8 @@
 @media (min-width: @tablet-width) {
   .product {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 350px 350px;
+    justify-content: center;
     gap: 30px;
     margin: 0;
   }
@@ -121,7 +126,7 @@
 
 @media (min-width: @desktop-width) {
   .product {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 317px);
     margin-bottom: 60px;
   }
 }
